@@ -80,42 +80,36 @@ public class ConfigScreen extends Screen {
         this.addDrawableChild(this.addServerButton);
         
         // Server list (left side)
-        // Significantly reduce height so list stays within black background and above Remove button
-        int listBottom = removeButtonY - 30;
+        // Set bottom to match black background exactly
+        int listBottom = bottomButtonsY - 30;
 
         this.serverList = new ServerListWidget(
             this.client,
             listWidth,
-            listBottom,
+            this.height,
             topListY,
             25,
             this
         );
-        // Ensure the list doesn't cover the center/top buttons
         this.serverList.setX(margin);
-        this.addDrawableChild(this.serverList);
+        this.serverList.setY(topListY);
+        this.serverList.setHeight(listBottom - topListY);
         
         // Update server list
         updateServerList();
-        
-        // Remove server button
-        this.removeServerButton = ButtonWidget.builder(
-            Text.literal("Remove"),
-            button -> removeServer()
-        ).dimensions(margin, removeButtonY, listWidth, 20).build();
-        this.addDrawableChild(this.removeServerButton);
         
         // Pack list (right side)
         this.packList = new PackListWidget(
             this.client,
             listWidth,
-            listBottom,
+            this.height,
             topListY,
             25,
             this
         );
         this.packList.setX(this.width - listWidth - margin);
-        this.addDrawableChild(this.packList);
+        this.packList.setY(topListY);
+        this.packList.setHeight(listBottom - topListY);
 
         // Filter toggle above pack list
         this.filterButton = ButtonWidget.builder(
@@ -126,6 +120,10 @@ public class ConfigScreen extends Screen {
                 updatePackList();
             }
         ).dimensions(this.width - listWidth - margin, topListY - 24, listWidth, 20).build();
+        
+        // Add widgets in order
+        this.addDrawableChild(this.serverList);
+        this.addDrawableChild(this.packList);
         this.addDrawableChild(this.filterButton);
         
         // Default selection so the user sees something immediately
@@ -135,6 +133,13 @@ public class ConfigScreen extends Screen {
 
         // Update pack list
         updatePackList();
+        
+        // Remove server button - moved to bottom row next to Save & Close
+        this.removeServerButton = ButtonWidget.builder(
+            Text.literal("Remove"),
+            button -> removeServer()
+        ).dimensions(this.width / 2 - 155, bottomButtonsY - 25, 100, 20).build();
+        this.addDrawableChild(this.removeServerButton);
         
         // Save button
         this.saveButton = ButtonWidget.builder(
@@ -166,12 +171,12 @@ public class ConfigScreen extends Screen {
         int listWidth = 150;
         int topListY = 70;
         int bottomButtonsY = this.height - 25;
-        int removeButtonY = bottomButtonsY - 25;
+        int listBottom = bottomButtonsY - 30;
         
-        // Hintergrund für Server-Liste (links) - ersetzt den Button-Look
-        context.fill(margin, topListY, margin + listWidth, removeButtonY - 30, 0xC0101010);
+        // Hintergrund für Server-Liste (links)
+        context.fill(margin, topListY, margin + listWidth, listBottom, 0xC0101010);
         // Hintergrund für Pack-Liste (rechts)
-        context.fill(this.width - listWidth - margin, topListY, this.width - margin, removeButtonY - 30, 0xC0101010);
+        context.fill(this.width - listWidth - margin, topListY, this.width - margin, listBottom, 0xC0101010);
         
         // Render widgets first
         super.render(context, mouseX, mouseY, delta);
@@ -233,12 +238,15 @@ public class ConfigScreen extends Screen {
      * Remove the selected server profile.
      */
     private void removeServer() {
+        ResourcePackLoader.LOGGER.info("Remove button clicked! selectedServer={}", selectedServer);
         if (selectedServer == null) {
+            ResourcePackLoader.LOGGER.warn("selectedServer is null, nothing to remove");
             return;
         }
 
         if ("Default Profile".equals(selectedServer)) {
             // Clear default profile instead of deleting the entry so the UI stays consistent
+            ResourcePackLoader.LOGGER.info("Clearing Default Profile");
             config.setDefaultProfile(new ServerProfile());
             updatePackList();
             return;
@@ -246,12 +254,15 @@ public class ConfigScreen extends Screen {
 
         // Clear selection BEFORE removing to prevent auto-reselection
         String toRemove = selectedServer;
+        ResourcePackLoader.LOGGER.info("Removing server: {}", toRemove);
         selectedServer = null;
         this.serverList.setSelected(null);
         
         config.removeServerProfile(toRemove);
+        ResourcePackLoader.LOGGER.info("Server removed from config");
         updateServerList();
         updatePackList();
+        ResourcePackLoader.LOGGER.info("Lists updated after removal");
     }
     
     /**

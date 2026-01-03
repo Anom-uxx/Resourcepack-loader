@@ -59,21 +59,31 @@ public class ServerListWidget extends EntryListWidget<ServerListWidget.ServerEnt
 
     @Override
     public boolean mouseClicked(Click click, boolean doubleClick) {
-        // Only handle clicks within the actual list boundaries
+        // Strictly check both isMouseOver AND actual Y-coordinate bounds
+        // to avoid intercepting clicks meant for buttons below
         if (!this.isMouseOver(click.x(), click.y())) {
+            System.out.println("ServerListWidget.mouseClicked: not over list, returning false");
+            return false;
+        }
+        
+        // Double-check Y bounds to be safe
+        if (click.y() < this.getY() || click.y() >= this.getBottom()) {
+            System.out.println("ServerListWidget.mouseClicked: Y=" + click.y() + " outside bounds [" + this.getY() + "," + this.getBottom() + "], returning false");
             return false;
         }
 
         if (click.button() == 0) {
             ServerEntry entry = this.getEntryAtPosition(click.x(), click.y());
             if (entry != null) {
+                System.out.println("ServerListWidget.mouseClicked: Found entry, selecting and notifying parent");
                 this.setSelected(entry);
                 this.parent.setSelectedServer(entry.serverAddress);
                 return true;
             }
         }
 
-        return super.mouseClicked(click, doubleClick);
+        System.out.println("ServerListWidget.mouseClicked: button=" + click.button() + ", no entry found");
+        return false;
     }
     
     /**

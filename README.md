@@ -13,7 +13,7 @@ A Minecraft Fabric **CLIENT-SIDE** mod for automatically enabling/disabling reso
 
 ## Requirements
 
-- **Minecraft**: 1.21.10
+- **Minecraft**: 1.21.10 or 1.21.11
 - **Fabric Loader**: 0.16.0 or higher
 - **Fabric API**: Required
 - **ModMenu**: Optional (but recommended for easy config access)
@@ -110,6 +110,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 If you encounter any issues, please report them on the [GitHub Issues](https://github.com/Anom-uxx/Resourcepack-loader-/issues) page.
-
-## Version 
-1.21.11 Not Supportet (in Work)

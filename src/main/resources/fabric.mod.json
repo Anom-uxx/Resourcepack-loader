@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "resourcepack-loader",
+	"version": "${version}",
+	"name": "Resource Pack Loader",
+	"description": "Automatically enable/disable resource packs based on the server you join",
+	"authors": [
+		"Anom-uxx"
+	],
+	"contact": {
+		"homepage": "https://github.com/Anom-uxx/Resourcepack-loader-"
+	},
+	"license": "MIT",
+	"icon": "assets/logo.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.anomuxx.resourcepackloader.ResourcePackLoader"
+		],
+		"modmenu": [
+			"com.anomuxx.resourcepackloader.ModMenuIntegration"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"fabric-api": "*",
+		"minecraft": ">=1.21.10 <=1.21.11"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}

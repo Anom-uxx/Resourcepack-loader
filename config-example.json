@@ -1,0 +1,44 @@
+{
+  "defaultProfile": {
+    "enable": [
+      "vanilla_tweaks.zip"
+    ],
+    "disable": []
+  },
+  "servers": {
+    "localhost": {
+      "enable": [
+        "debug_pack.zip",
+        "developer_tools.zip"
+      ],
+      "disable": [
+        "pvp_textures.zip"
+      ]
+    },
+    "hypixel.net": {
+      "enable": [
+        "pvp_textures.zip",
+        "short_swords.zip",
+        "low_fire.zip"
+      ],
+      "disable": [
+        "vanilla_tweaks.zip"
+      ]
+    },
+    "mineplex.com": {
+      "enable": [
+        "pvp_textures.zip"
+      ],
+      "disable": []
+    },
+    "creative.server.net": {
+      "enable": [
+        "building_helpers.zip",
+        "grid_overlay.zip"
+      ],
+      "disable": [
+        "pvp_textures.zip"
+      ]
+    }
+  }
+}

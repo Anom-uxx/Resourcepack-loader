@@ -1,0 +1,127 @@
+plugins {
+	id 'fabric-loom' version '1.14.9'
+	id 'maven-publish'
+}
+
+import java.nio.file.Files
+import java.nio.file.StandardCopyOption
+import java.util.regex.Pattern
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+	}
+}
+
+dependencies {
+	// Minecraft and Fabric Loader
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	// Fabric API
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// ModMenu for config screen integration
+	modImplementation "maven.modrinth:modmenu:${project.modmenu_version}"
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 21
+}
+
+java {
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.archives_base_name}"}
+	}
+}
+
+// After a successful build, move all previous version artifacts out of build/libs into #old_versions/<version>/
+// and create a source snapshot zip for the current version. This keeps build/libs clean.
+gradle.buildFinished { result ->
+	if (result.failure != null) {
+		return
+	}
+
+	def libsDir = project.layout.buildDirectory.dir("libs").get().asFile
+	if (!libsDir.exists()) {
+		return
+	}
+
+	def archiveBaseName = project.extensions.getByType(org.gradle.api.plugins.BasePluginExtension).archivesName.get()
+	def currentVersion = project.version.toString()
+	def oldVersionsRoot = project.layout.projectDirectory.dir("#old_versions").asFile
+	def currentVersionDir = new File(oldVersionsRoot, currentVersion)
+	currentVersionDir.mkdirs()
+
+	// Create a source snapshot for the current build inside #old_versions/<version>/.
+	def sourceSnapshotName = "${archiveBaseName}-${currentVersion}-source.zip"
+	def sourceSnapshot = new File(currentVersionDir, sourceSnapshotName)
+	if (!sourceSnapshot.exists()) {
+		ant.zip(destfile: sourceSnapshot) {
+			fileset(dir: project.projectDir) {
+				include(name: "src/**")
+				include(name: "build.gradle")
+				include(name: "settings.gradle")
+				include(name: "gradle.properties")
+				include(name: "gradle/**")
+				include(name: "gradlew")
+				include(name: "gradlew.bat")
+			}
+		}
+	}
+
+	// Move older artifacts to #old_versions/<version>/
+	def basePrefix = "${archiveBaseName}-"
+	// Expect semantic versions like 1.0.1. Anything after that (e.g. -sources, -dev, -source) is a classifier.
+	def versionExtractor = Pattern.compile(Pattern.quote(archiveBaseName) + "-(\\d+\\.\\d+\\.\\d+)(?:-(.+))?\\.(jar|zip)")
+
+	libsDir.listFiles()?.each { File file ->
+		if (!file.isFile()) {
+			return
+		}
+		def name = file.name
+		if (!name.startsWith(basePrefix)) {
+			return
+		}
+		if (!(name.endsWith(".jar") || name.endsWith(".zip"))) {
+			return
+		}
+		// Keep current version artifacts in build/libs
+		if (name.contains("-${currentVersion}")) {
+			return
+		}
+
+		def matcher = versionExtractor.matcher(name)
+		if (!matcher.matches()) {
+			return
+		}
+		def version = matcher.group(1)
+		def destDir = new File(oldVersionsRoot, version)
+		destDir.mkdirs()
+		Files.move(file.toPath(), new File(destDir, name).toPath(), StandardCopyOption.REPLACE_EXISTING)
+	}
+}

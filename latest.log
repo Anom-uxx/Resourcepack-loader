@@ -1,0 +1,962 @@
+null# Minecraft launcher log started at 2026-01-02 11:29:24
+# Profile: OPSUCHT 1.0.0 
+
+
+[11:29:27] [main] [FabricLoader/GameProvider/INFO]: Loading Minecraft 1.21.10 with Fabric Loader 0.18.1
+[11:29:27] [ForkJoinPool-1-worker-2] [FabricLoader/Metadata/WARN]: Mod hit-color uses the version fabric-1.21.10-0.1 which isn't compatible with Loader's extended semantic version format (Could not parse version number component 'fabric'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
+[11:29:28] [main] [FabricLoader/Resolution/WARN]: Warnings were found!
+ - Mod 'Sodium Extra' (sodium-extra) 0.7.1+mc1.21.10 recommends version 1.8.5 or later of reeses-sodium-options, which is missing!
+	 - You should install version 1.8.5 or later of reeses-sodium-options for the optimal experience.
+[11:29:28] [main] [FabricLoader/INFO]: Loading 152 mods:
+	- antitoolbreak 2.0.0+mc1.21.9
+	- appleskin 3.0.7+mc1.21.9
+	- architectury 18.0.8
+	- armor_hud 3.0-1.21.10
+	- axiom 5.2.1
+	   |-- com_moulberry_axiomclientapi 1.0.28
+	   |-- com_moulberry_mixinconstraints 1.0.9
+	   \-- lattice 1.3.0
+	- balm 21.10.8
+	   \-- kuma_api 21.10.5
+	- boxlib 19.0.3
+	- chat-binds 1.0.0
+	- chatnotify 2.6.3+1.21.10
+	- cloth-config 20.0.149
+	   \-- cloth-basic-math 0.6.1
+	- clumps 28.0.0.1
+	- continuity 3.0.1-beta.2+1.21.10
+	- crosshairindicator 1.0.3
+	- cullleaves 4.1.1
+	- dynamic_fps 3.11.0
+	   \-- net_lostluma_battery 1.3.0
+	- entityculling 1.9.4
+	   |-- transition 1.0.11
+	   \-- trender 1.0.10
+	- fabric-api 0.138.3+1.21.10
+	   |-- fabric-api-base 1.0.0+14b92d896f
+	   |-- fabric-api-lookup-api-v1 1.6.106+d17682156f
+	   |-- fabric-biome-api-v1 16.1.0+c2417d4f6f
+	   |-- fabric-block-api-v1 1.1.5+d17682156f
+	   |-- fabric-block-view-api-v2 1.0.34+e4fd1b926f
+	   |-- fabric-command-api-v2 2.4.0+c0ab2d5d6f
+	   |-- fabric-content-registries-v0 10.2.6+b6a242646f
+	   |-- fabric-convention-tags-v1 2.1.49+7f945d5b6f
+	   |-- fabric-convention-tags-v2 2.17.0+ff7bc77d6f
+	   |-- fabric-crash-report-info-v1 0.3.18+33df5e6e6f
+	   |-- fabric-data-attachment-api-v1 1.8.33+cd3b9e596f
+	   |-- fabric-data-generation-api-v1 23.2.27+d8b85ef16f
+	   |-- fabric-dimensions-v1 4.0.22+38b9cc196f
+	   |-- fabric-entity-events-v1 2.1.13+fde3702c6f
+	   |-- fabric-events-interaction-v0 4.0.36+5ba217126f
+	   |-- fabric-game-rule-api-v1 1.1.1+e47eaae56f
+	   |-- fabric-item-api-v1 11.5.11+9bce411b6f
+	   |-- fabric-item-group-api-v1 4.2.27+86b3ae576f
+	   |-- fabric-key-binding-api-v1 1.1.1+b3ba9c486f
+	   |-- fabric-lifecycle-events-v1 2.6.9+33df5e6e6f
+	   |-- fabric-loot-api-v2 3.0.67+3f89f5a56f
+	   |-- fabric-loot-api-v3 2.0.14+d17682156f
+	   |-- fabric-message-api-v1 6.1.7+3154c1c86f
+	   |-- fabric-model-loading-api-v1 6.0.4+3ffd6ef06f
+	   |-- fabric-networking-api-v1 5.1.0+b095d8db6f
+	   |-- fabric-object-builder-api-v1 21.1.28+9bce411b6f
+	   |-- fabric-particles-v1 4.2.3+a0ee59a46f
+	   |-- fabric-recipe-api-v1 8.2.0+39709ef06f
+	   |-- fabric-registry-sync-v0 6.1.42+679c8c5c6f
+	   |-- fabric-renderer-api-v1 7.2.2+3706cdf36f
+	   |-- fabric-renderer-indigo 4.1.3+d7df91576f
+	   |-- fabric-rendering-fluids-v1 3.1.38+86b3ae576f
+	   |-- fabric-rendering-v1 16.2.0+bee81f016f
+	   |-- fabric-resource-conditions-api-v1 5.0.28+33df5e6e6f
+	   |-- fabric-resource-loader-v0 3.3.1+d4d4122a6f
+	   |-- fabric-resource-loader-v1 1.0.4+14959b836f
+	   |-- fabric-screen-api-v1 3.1.0+9c82a7986f
+	   |-- fabric-screen-handler-api-v1 1.3.151+d17682156f
+	   |-- fabric-serialization-api-v1 1.0.0+d857c9766f
+	   |-- fabric-sound-api-v1 1.0.45+328a75ba6f
+	   |-- fabric-tag-api-v1 1.2.13+2fa446b26f
+	   |-- fabric-transfer-api-v1 6.0.15+79ec2c126f
+	   \-- fabric-transitive-access-wideners-v1 6.5.3+41eb43436f
+	- fabric-language-kotlin 1.13.7+kotlin.2.2.21
+	   |-- org_jetbrains_kotlin_kotlin-reflect 2.2.21
+	   |-- org_jetbrains_kotlin_kotlin-stdlib 2.2.21
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk7 2.2.21
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk8 2.2.21
+	   |-- org_jetbrains_kotlinx_atomicfu-jvm 0.29.0
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm 1.10.2
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-jdk8 1.10.2
+	   |-- org_jetbrains_kotlinx_kotlinx-datetime-jvm 0.7.1
+	   |-- org_jetbrains_kotlinx_kotlinx-io-bytestring-jvm 0.8.0
+	   |-- org_jetbrains_kotlinx_kotlinx-io-core-jvm 0.8.0
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm 1.9.0
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-core-jvm 1.9.0
+	   \-- org_jetbrains_kotlinx_kotlinx-serialization-json-jvm 1.9.0
+	- fabricloader 0.18.1
+	   \-- mixinextras 0.5.0
+	- ferritecore 8.0.2
+	- flashback 0.38.2
+	- forgeconfigapiport 21.10.1
+	   |-- com_electronwill_night-config_core 3.8.3
+	   \-- com_electronwill_night-config_toml 3.8.3
+	- freecam 1.3.5+mc1.21.10
+	- gammautils 2.4.9
+	- hit-color fabric-1.21.10-0.1
+	- hitrange 1.5.0+mc1.21.9
+	- immediatelyfast 1.13.4+1.21.10
+	   \-- net_lenni0451_reflect 1.6.1+curseforge
+	- java 21
+	- krypton 0.2.10
+	   \-- com_velocitypowered_velocity-native 3.4.0-SNAPSHOT
+	- lightweight-inventory-sorting 1.1.4+1.21.10
+	- litematica 0.24.5
+	- litematica-server-paster 1.3.12
+	   \-- fanetlib 0.2.6
+	- litematica_printer 3.2.1
+	- lithium 0.20.1+mc1.21.10
+	- malilib 0.26.6
+	- midnightlib 1.9.2
+	- minecraft 1.21.10
+	- modmenu 16.0.0-rc.1
+	- moreculling 1.5.0-beta.2
+	   |-- conditional-mixin 0.6.3
+	   \-- mixinsquared 0.2.0
+	- mousetweaks 2.29
+	- noisium 2.8.1+mc1.21.10
+	- placeholder-api 2.8.1+1.21.10
+	- polymer-bundled 0.14.3+1.21.10
+	   |-- polymer-autohost 0.14.3+1.21.10
+	   |-- polymer-blocks 0.14.3+1.21.10
+	   |-- polymer-common 0.14.3+1.21.10
+	   |    \-- packet_tweaker 0.6.0+1.21.10
+	   |-- polymer-core 0.14.3+1.21.10
+	   |    |-- polymer-networking 0.14.3+1.21.10
+	   |    |    \-- polymer-common 0.14.3+1.21.10
+	   |    |         \-- packet_tweaker 0.6.0+1.21.10
+	   |    \-- polymer-registry-sync-manipulator 0.14.3+1.21.10
+	   |-- polymer-resource-pack 0.14.3+1.21.10
+	   |    \-- polymer-common 0.14.3+1.21.10
+	   |         \-- packet_tweaker 0.6.0+1.21.10
+	   |-- polymer-resource-pack-extras 0.14.3+1.21.10
+	   |-- polymer-sound-patcher 0.14.3+1.21.10
+	   \-- polymer-virtual-entity 0.14.3+1.21.10
+	        \-- polymer-common 0.14.3+1.21.10
+	             \-- packet_tweaker 0.6.0+1.21.10
+	- puzzleslib 21.10.8
+	- pvpmusic 1.2.0
+	- resourcepack-loader 2.0.14
+	- shulkerboxtooltip 5.2.13+1.21.10
+	- sodium 0.7.3+mc1.21.10
+	- sodium-extra 0.7.1+mc1.21.10
+	- sodiumcoreshadersupport 1.4.3
+	- sound_physics_remastered 1.21.10-1.5.1
+	- toggle-sprint-display 1.6.0
+	- ukulib 1.9.0+1.21.9
+	   \-- com_moandjiezana_toml_toml4j 0.7.2
+	- voicechat 1.21.10-2.6.7
+	   \-- voicechat_api 2.6.0
+	- worldedit 7.4.0-beta-01+ae062ca
+	   \-- worldeditcui_protocol 4.0.2
+	- yet_another_config_lib_v3 3.8.1+1.21.10-fabric
+	   |-- com_twelvemonkeys_common_common-image 3.12.0
+	   |-- com_twelvemonkeys_common_common-io 3.12.0
+	   |-- com_twelvemonkeys_common_common-lang 3.12.0
+	   |-- com_twelvemonkeys_imageio_imageio-core 3.12.0
+	   |-- com_twelvemonkeys_imageio_imageio-metadata 3.12.0
+	   |-- com_twelvemonkeys_imageio_imageio-webp 3.12.0
+	   |-- org_quiltmc_parsers_gson 0.2.1
+	   \-- org_quiltmc_parsers_json 0.2.1
+	- zoomify 2.14.6+1.21.9
+	   \-- com_akuleshov7_ktoml-core-jvm 0.5.2
+[11:29:30] [main] [FabricLoader/Mixin/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/Christoph%20Bruehl/AppData/Roaming/ModrinthApp/meta/libraries/net/fabricmc/sponge-mixin/0.16.5+mixin.0.8.7/sponge-mixin-0.16.5+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[11:29:30] [main] [FabricLoader/Mixin/INFO]: Compatibility level set to JAVA_21
+[11:29:31] [main] [axiom/INFO]: Loading Mixin Plugin for Axiom/5.2.1
+[11:29:31] [main] [FabricLoader/Mixin/WARN]: Reference map 'forgeconfigapiport.common.refmap.json' for forgeconfigapiport.common.mixins.json could not be read. If this is a development environment you can ignore this message
+[11:29:31] [main] [FabricLoader/Mixin/WARN]: Reference map 'forgeconfigapiport.fabric.refmap.json' for forgeconfigapiport.fabric.mixins.json could not be read. If this is a development environment you can ignore this message
+[11:29:31] [main] [Lithium/INFO]: Loaded configuration file for Lithium: 165 options available, 1 override(s) found.
+[11:29:32] [main] [Sodium/INFO]: Loaded configuration file for Sodium: 42 options available, 0 override(s) found
+[11:29:32] [main] [Sodium Extra Config/INFO]: Loaded configuration file for Sodium Extra: 33 options available, 0 override(s) found
+[11:29:32] [main] [FabricLoader/Mixin/WARN]: Reference map 'sodiumcoreshadersupport.refmap.json' for sodiumcoreshadersupport.mixins.json could not be read. If this is a development environment you can ignore this message
+[11:29:32] [main] [FabricLoader/Mixin/WARN]: Reference map 'sodiumcoreshadersupport.refmap.json' for sodiumcoreshadersupport.fabric.mixins.json could not be read. If this is a development environment you can ignore this message
+[11:29:32] [main] [FabricLoader/Mixin/WARN]: Reference map 'yet_another_config_lib_v3.refmap.json' for yacl.mixins.json could not be read. If this is a development environment you can ignore this message
+[11:29:32] [main] [FabricLoader/Mixin/WARN]: Reference map 'yet_another_config_lib_v3.refmap.json' for yacl-fabric.mixins.json could not be read. If this is a development environment you can ignore this message
+[11:29:33] [main] [FabricLoader/Mixin/WARN]: Error loading class: me/jellysquid/mods/sodium/client/render/chunk/DefaultChunkRenderer (java.lang.ClassNotFoundException: me/jellysquid/mods/sodium/client/render/chunk/DefaultChunkRenderer)
+[11:29:34] [main] [FabricLoader/Mixin/WARN]: Error loading class: me/jellysquid/mods/sodium/client/render/SodiumWorldRenderer (java.lang.ClassNotFoundException: me/jellysquid/mods/sodium/client/render/SodiumWorldRenderer)
+[11:29:35] [main] [FabricLoader/Mixin/WARN]: Error loading class: net/irisshaders/iris/pathways/HandRenderer (java.lang.ClassNotFoundException: net/irisshaders/iris/pathways/HandRenderer)
+[11:29:35] [main] [FabricLoader/Mixin/WARN]: Error loading class: net/irisshaders/iris/shadows/ShadowRenderer (java.lang.ClassNotFoundException: net/irisshaders/iris/shadows/ShadowRenderer)
+[11:29:35] [main] [Lithium/INFO]: Force-enabling mixin 'compat.worldedit.LevelChunkMixin' as rule 'mixin.compat.worldedit' (added by mods [lithium]) enables it
+[11:29:37] [main] [FabricLoader/Mixin/WARN]: Error loading class: me/jellysquid/mods/sodium/client/render/SodiumWorldRenderer (java.lang.ClassNotFoundException: me/jellysquid/mods/sodium/client/render/SodiumWorldRenderer)
+[11:29:37] [main] [FabricLoader/Mixin/WARN]: Error loading class: me/jellysquid/mods/sodium/client/render/SodiumWorldRenderer (java.lang.ClassNotFoundException: me/jellysquid/mods/sodium/client/render/SodiumWorldRenderer)
+[11:29:37] [main] [FabricLoader/Mixin/WARN]: Error loading class: org/jetbrains/annotations/ApiStatus$Internal (java.lang.ClassNotFoundException: org/jetbrains/annotations/ApiStatus$Internal)
+[11:29:37] [main] [Sodium-GraphicsAdapterProbe/INFO]: Searching for graphics cards...
+[11:29:37] [main] [Sodium-GraphicsAdapterProbe/INFO]: Found graphics adapter: AdapterInfo{vendor=INTEL, description='Intel(R) HD Graphics 520', adapterType=0x0000012B, openglIcdFilePath='C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_77369ead7ddd9683\ig9icd64.dll', openglIcdVersion=31.0.101.2115}
+[11:29:38] [main] [FabricLoader/MixinExtras|Service/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[11:29:45] [Datafixer Bootstrap] [com.mojang.datafixers.DataFixerBuilder/INFO]: 278 Datafixer optimizations took 3833 milliseconds
+[11:30:09] [main] [malilib/INFO]: Sodium: [0.7.3+mc1.21.10], Iris: [N/F]
+[11:30:11] [Render thread] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[11:30:11] [Render thread] [net.minecraft.class_310/INFO]: Setting user: {MINECRAFT_USERNAME}
+[11:30:12] [Render thread] [axiom/INFO]: Initializing Axiom/5.2.1
+[11:30:16] [Render thread] [crosshairindicator/INFO]: CrosshairIndicator Initialized
+[11:30:17] [Render thread] [me.steinborn.krypton.mod.shared.KryptonSharedInitializer/INFO]: Compression will use Java, encryption will use Java
+[11:30:17] [Render thread] [lightweight-inventory-sorting/INFO]: Lightweight Inventory Sorting initialized on the server!
+[11:30:17] [Render thread] [litematica_printer/INFO]: litematica_printer-1.21.10-3.2.1 initialized.
+[11:30:17] [Render thread] [noisium/INFO]: Loading Noisium.
+[11:30:17] [Render thread] [noisium/INFO]: Loaded Noisium config from resource
+[11:30:17] [Render thread] [noisium/INFO]: Noisium config: noiseChunkGenerator=true, generationShapeConfig=true, chunkSection=true, chainedBlockSource=true, useGuiGraphics=true
+[11:30:17] [Render thread] [noisium/INFO]: Loaded Fabric config from C:\Users\Christoph Bruehl\AppData\Roaming\ModrinthApp\profiles\OPSUCHT 1.0.0\config\noisium.json
+[11:30:18] [Render thread] [Puzzles Lib/INFO]: Constructing components for puzzleslib:common
+[11:30:18] [Render thread] [pvpmusic/INFO]: Hello Fabric world!
+[11:30:18] [Render thread] [ShulkerBoxTooltip/INFO]: [ShulkerBoxTooltip] Could not find configuration file, creating default file
+[11:30:18] [Render thread] [voicechat/INFO]: [voicechat] Compatibility version 20
+[11:30:18] [Render thread] [voicechat/INFO]: [voicechat] Loading plugins
+[11:30:18] [Render thread] [voicechat/INFO]: [voicechat] Loaded 2 plugin(s)
+[11:30:18] [Render thread] [voicechat/INFO]: [voicechat] Initializing plugins
+[11:30:18] [Render thread] [Sound Physics - General/INFO]: Initializing Simple Voice Chat integration
+[11:30:18] [Render thread] [voicechat/INFO]: [voicechat] Initialized 2 plugin(s)
+[11:30:18] [Render thread] [voicechat/INFO]: [voicechat] Registering events for 'flashback'
+[11:30:18] [Render thread] [voicechat/INFO]: [voicechat] Registering events for 'sound_physics_remastered'
+[11:30:19] [Render thread] [com.sk89q.worldedit.extension.platform.PlatformManager/INFO]: Got request to register class com.sk89q.worldedit.fabric.FabricPlatform with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@63dc261c]
+[11:30:20] [Render thread] [com.sk89q.worldedit.fabric.FabricWorldEdit/INFO]: WorldEdit for Fabric (version 7.4.0-beta-01+ae062ca) is loaded
+[11:30:20] [Render thread] [dev.architectury.networking.client.fabric.ClientNetworkManagerImpl/INFO]: Registering S2C receiver with id architectury:spawn_entity_packet
+[11:30:20] [Render thread] [BoxLib/INFO]: [BoxLib]: Initialized BoxLib v18.0.3
+[11:30:20] [Render thread] [net.fabricmc.fabric.impl.client.indigo.Indigo/INFO]: [Indigo] Different rendering plugin detected; not applying Indigo.
+[11:30:20] [Render thread] [me.steinborn.krypton.mod.client.KryptonClientInitializer/INFO]: Krypton is now accelerating your Minecraft client's networking stack 🚀
+[11:30:20] [Render thread] [me.steinborn.krypton.mod.client.KryptonClientInitializer/INFO]: Note that Krypton is most effective on servers, not the client.
+[11:30:21] [Render thread] [Sound Physics - General/WARN]: Using Cloth Config GUI
+[11:30:22] [Render thread] [Mod Menu/Update Checker/INFO]: Checking mod updates...
+[11:30:22] [Render thread] [net.minecraft.class_2983/INFO]: [STDOUT]: [Mouse Tweaks] Main.initialize()
+[11:30:22] [Render thread] [net.minecraft.class_2983/INFO]: [STDOUT]: [Mouse Tweaks] Initialized.
+[11:30:22] [Render thread] [Puzzles Lib/INFO]: Constructing components for puzzleslib:client
+[11:30:22] [Render thread] [net.minecraft.class_2983/INFO]: [STDOUT]: PvP Music config loaded from C:\Users\Christoph Bruehl\AppData\Roaming\ModrinthApp\profiles\OPSUCHT 1.0.0\config\pvpmusic.json
+[11:30:22] [Render thread] [ResourcePackLoader/INFO]: Initializing Resource Pack Loader
+[11:30:22] [Render thread] [ResourcePackLoader/INFO]: Loaded server profile: 'localhost'
+[11:30:22] [Render thread] [ResourcePackLoader/INFO]: Loaded server profile: 'creative.server.net'
+[11:30:22] [Render thread] [ResourcePackLoader/INFO]: Loaded server profile: 'mineplex.com'
+[11:30:22] [Render thread] [ResourcePackLoader/INFO]: Loaded server profile: 'hypixel.net'
+[11:30:22] [Render thread] [ResourcePackLoader/INFO]: Loaded server profile: 'gommehd.net'
+[11:30:22] [Render thread] [ResourcePackLoader/INFO]: Loaded configuration with 5 server profile(s)
+[11:30:22] [Render thread] [ResourcePackLoader/INFO]: Server connection event handlers registered
+[11:30:22] [Render thread] [ResourcePackLoader/INFO]: Resource Pack Loader initialized successfully
+[11:30:22] [Render thread] [Sodium Core Shader Support/INFO]: Hello from Common init on Fabric! we are currently in a production environment!
+[11:30:22] [Render thread] [Sodium Core Shader Support/INFO]: The ID for diamonds is minecraft:diamond
+[11:30:22] [Render thread] [Sodium Core Shader Support/INFO]: Sodium version 0.7.3+mc1.21.10
+[11:30:22] [Render thread] [Sound Physics - General/INFO]: Reloading reverb parameters
+[11:30:23] [ModMenu/Update Checker/Fabric Loader] [Mod Menu/Update Checker/INFO]: Update available for 'fabricloader@0.18.1'
+[11:30:23] [Render thread] [net.minecraft.class_2983/INFO]: [STDOUT]: [LibGui] Initializing Client...
+[11:30:23] [Render thread] [voicechat/INFO]: [voicechat] Initializing Opus
+[11:30:23] [Render thread] [voicechat/INFO]: [voicechat] Successfully initialized Opus
+[11:30:23] [Render thread] [voicechat/INFO]: [voicechat] Initializing RNNoise
+[11:30:23] [Render thread] [voicechat/INFO]: [voicechat] Successfully initialized RNNoise
+[11:30:23] [Render thread] [voicechat/INFO]: [voicechat] Initializing Speex
+[11:30:23] [Render thread] [voicechat/INFO]: [voicechat] Successfully initialized Speex
+[11:30:23] [Render thread] [voicechat/INFO]: [voicechat] Initializing LAME
+[11:30:23] [Render thread] [voicechat/INFO]: [voicechat] Successfully initialized LAME
+[11:30:23] [Render thread] [voicechat/INFO]: [voicechat] Using Cloth Config GUI
+[11:30:23] [Render thread] [YetAnotherConfigLib/INFO]: Deserializing YACLConfig from 'C:\Users\Christoph Bruehl\AppData\Roaming\ModrinthApp\profiles\OPSUCHT 1.0.0\config\yacl.json5'
+[11:30:26] [Worker-Main-1] [Mod Menu/Update Checker/INFO]: Update available for 'fabric-api@0.138.3+1.21.10', (-> 0.138.4+1.21.10)
+[11:30:26] [Worker-Main-1] [Mod Menu/Update Checker/INFO]: Update available for 'entityculling@1.9.4', (-> 1.9.5)
+[11:30:26] [Worker-Main-1] [Mod Menu/Update Checker/INFO]: Update available for 'chatnotify@2.6.3+1.21.10', (-> 2.6.4+1.21.10)
+[11:30:26] [Worker-Main-1] [Mod Menu/Update Checker/INFO]: Update available for 'litematica_printer@3.2.1', (-> 3.2.1+1.21.10)
+[11:30:26] [Worker-Main-1] [Mod Menu/Update Checker/INFO]: Update available for 'voicechat@1.21.10-2.6.7', (-> fabric-1.21.10-2.6.10)
+[11:30:26] [Worker-Main-1] [Mod Menu/Update Checker/INFO]: Update available for 'flashback@0.38.2', (-> 0.39.1)
+[11:30:26] [Worker-Main-1] [Mod Menu/Update Checker/INFO]: Update available for 'polymer-bundled@0.14.3+1.21.10', (-> 0.14.4+1.21.10)
+[11:30:26] [Worker-Main-1] [Mod Menu/Update Checker/INFO]: Update available for 'malilib@0.26.6', (-> 0.26.8)
+[11:30:26] [Worker-Main-1] [Mod Menu/Update Checker/INFO]: Update available for 'fabric-language-kotlin@1.13.7+kotlin.2.2.21', (-> 1.13.8+kotlin.2.3.0)
+[11:30:26] [Worker-Main-1] [Mod Menu/Update Checker/INFO]: Update available for 'litematica@0.24.5', (-> 0.24.7)
+[11:30:27] [Render thread] [net.minecraft.class_310/INFO]: Backend library: LWJGL version 3.3.3-snapshot
+[11:30:28] [Render thread] [ImmediatelyFast/INFO]: Initializing ImmediatelyFast 1.13.4+1.21.10 on Intel(R) HD Graphics 520 (Intel) with OpenGL 3.3.0 - Build 31.0.101.2115
+[11:30:28] [Render thread] [com.mojang.blaze3d.systems.RenderSystem/INFO]: OpenGL Vendor: Intel
+[11:30:28] [Render thread] [com.mojang.blaze3d.systems.RenderSystem/INFO]: OpenGL Renderer: Intel(R) HD Graphics 520
+[11:30:28] [Render thread] [com.mojang.blaze3d.systems.RenderSystem/INFO]: OpenGL Version: 3.3.0 - Build 31.0.101.2115
+[11:30:28] [Render thread] [net.minecraft.class_310/INFO]: Using optional rendering extensions: GL_ARB_buffer_storage, GL_KHR_debug, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access
+[11:30:29] [Render thread] [net.minecraft.class_3279/INFO]: Found non-pack entry 'C:\Users\Christoph Bruehl\AppData\Roaming\ModrinthApp\profiles\OPSUCHT 1.0.0\resourcepacks\Clean Connected Glass [1.21.5+].zip.disabled', ignoring
+[11:30:29] [Render thread] [net.minecraft.class_3255/ERROR]: Couldn't load file/NoFog V1.zip pack metadata: Pack declares support for version newer than 64, but is missing mandatory fields min_format and max_format
+[11:30:29] [Render thread] [net.minecraft.class_3255/ERROR]: Couldn't load file/NoFog V1.zip overlays metadata: Overlay "overlay_99" declares support for version newer than 64, but is missing mandatory fields min_format and max_format
+[11:30:29] [Render thread] [net.minecraft.class_3255/ERROR]: Couldn't load file/PVP SMP Deluxe V2.3.zip pack metadata: Pack declares support for version newer than 64, but is missing mandatory fields min_format and max_format
+[11:30:29] [Render thread] [net.minecraft.class_3255/ERROR]: Couldn't load file/Spunky Pack Classic.zip pack metadata: com.google.gson.stream.MalformedJsonException: Unterminated object at line 5 column 10 path $.pack.supported_formats
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+[11:30:29] [Render thread] [net.minecraft.class_3255/ERROR]: Couldn't load file/Spunky Pack Classic.zip pack metadata: com.google.gson.stream.MalformedJsonException: Unterminated object at line 5 column 10 path $.pack.supported_formats
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+[11:30:29] [Render thread] [net.minecraft.class_3288/WARN]: Missing metadata in pack file/Spunky Pack Classic.zip
+[11:30:31] [Render thread] [malilib/WARN]: onRegisterSpecialGuiRenderer():
+[11:30:31] [Render thread] [FabricLoader/Mixin/WARN]: Error loading class: me/jellysquid/mods/sodium/client/render/SodiumWorldRenderer (java.lang.ClassNotFoundException: me/jellysquid/mods/sodium/client/render/SodiumWorldRenderer)
+[11:30:32] [Render thread] [net.minecraft.class_3304/INFO]: Reloading ResourceManager: vanilla, fabric, antitoolbreak, appleskin, armor_hud, axiom, balm, boxlib, chat-binds, chatnotify, cloth-config, conditional-mixin, continuity, crosshairindicator, cullleaves, dynamic_fps, entityculling, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fanetlib, flashback, forgeconfigapiport, freecam, gammautils, hit-color, hitrange, immediatelyfast, krypton, lattice, lightweight-inventory-sorting, litematica, litematica-server-paster, litematica_printer, lithium, malilib, midnightlib, modmenu, moreculling, noisium, placeholder-api, polymer-blocks, polymer-core, polymer-resource-pack, puzzleslib, pvpmusic, resourcepack-loader, shulkerboxtooltip, sodium, sodium-extra, sodiumcoreshadersupport, sound_physics_remastered, toggle-sprint-display, trender, ukulib, voicechat, worldedit, yet_another_config_lib_v3, zoomify, black_icons, file/LowOnFire v1.21.9§8.zip, file/PVP SMP Deluxe V2.3.zip
+[11:30:33] [Render thread] [dynamic_fps/INFO]: Dynamic FPS 3.11.0 active on Fabric!
+[11:30:34] [Render thread] [moreculling/INFO]: Cached all modded block culling states
+[11:30:34] [Worker-Main-14] [net.minecraft.class_391/INFO]: Found unifont_all_no_pua-16.0.03.hex, loading
+[11:30:34] [Worker-Main-14] [net.minecraft.class_391/INFO]: Found unifont_jp_patch-16.0.03.hex, loading
+[11:30:34] [Worker-Main-14] [net.minecraft.class_391/INFO]: Found unifont_pua-16.0.03.hex, loading
+[11:30:39] [Worker-Main-14] [Sodium Core Shader Support/INFO]: Loading shaders...
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]: nameSpace: minecraft
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_water_mask.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/globals.glsl: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_leash.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/rotscale.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_translucent_moving_block.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_decal.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/fog.glsl: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/panorama.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/bits.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_water_mask.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_end_portal.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/stars.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_leash.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/terrain.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/entity_sobel.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_translucent_moving_block.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/projection.glsl: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/gui.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/entity_outline_box_blur.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_beacon_beam.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/transparency.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_clouds.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_crumbling.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/sky.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/terrain.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/gui.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/color_convolve.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_color.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_beacon_beam.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/dynamictransforms.glsl: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_see_through.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_clouds.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/box_blur.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/blit.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_color.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_item_entity_translucent_cull.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_tex_color.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_background_see_through.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_see_through.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_lightning.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_shadow.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/matrix.glsl: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/entity.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/glint.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_tex_color.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_background.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_background_see_through.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_crumbling.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_item_entity_translucent_cull.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/sky.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_shadow.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_outline.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/light.glsl: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/entity.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/invert.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/glint.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_background.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/screenquad.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/lightmap.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_world_border.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/stars.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/particle.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_tex.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_alpha.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_lines.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_outline.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_intensity_see_through.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/spiderclip.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_intensity.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_lightning.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_lines.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_world_border.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/particle.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_tex.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_alpha.fsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_intensity_see_through.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_decal.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_end_portal.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/panorama.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_intensity.vsh: Default
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]: nameSpace: sodium
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/chunk_matrices.glsl: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     blocks/block_layer_opaque.fsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     blocks/block_layer_opaque.vsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/chunk_vertex.glsl: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/fog.glsl: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/chunk_material.glsl: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]: nameSpace: flashback
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_old.vsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_old.fsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/screenquad_flip.vsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_round_alpha.fsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]: nameSpace: malilib
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     sv_selector.frag: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]: nameSpace: axiom
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/selection_outline.vsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/collision_mesh.vsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_block.vsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_old.fsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/brighten_lightmap.json: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_old.json: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/border.fsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/selection_outline.fsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/selection_outline.json: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/border.vsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_color_no_vertex_color.fsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_color_no_vertex_color.json: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/collision_mesh.json: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_lines.fsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/block.vsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_color_no_vertex_color.vsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/border.json: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/block.json: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_old.vsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/collision_mesh.fsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_block.fsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_lines.json: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_block.json: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/brighten_lightmap.fsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_lines.vsh: pack.name.fabricMod
+[11:30:39] [Worker-Main-14] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/block.fsh: pack.name.fabricMod
+[11:30:40] [Worker-Main-8] [net.minecraft.class_10097/WARN]: Missing block model: minecraft:builtin/entity
+[11:30:42] [Worker-Main-8] [net.minecraft.class_1092/WARN]: Missing texture references in model minecraft:block/moving_piston:
+    particle
+[11:30:42] [Worker-Main-8] [net.minecraft.class_1092/WARN]: Missing texture references in model minecraft:block/structure_void:
+    particle
+[11:30:45] [Render thread] [net.minecraft.class_1140/WARN]: Missing sound for event: pvpmusic:battle_music
+[11:30:45] [Render thread] [net.minecraft.class_4225/INFO]: OpenAL initialized on device OpenAL Soft on Lautsprecher/Kopfhörer (Realtek Audio)
+[11:30:45] [Render thread] [Sound Physics - General/INFO]: Initializing Sound Physics
+[11:30:45] [Render thread] [Sound Physics - General/INFO]: EFX Extension recognized
+[11:30:45] [Render thread] [Sound Physics - General/INFO]: Max auxiliary sends: 4
+[11:30:45] [Render thread] [Sound Physics - General/INFO]: Aux slot 1 created
+[11:30:45] [Render thread] [Sound Physics - General/INFO]: Aux slot 2 created
+[11:30:45] [Render thread] [Sound Physics - General/INFO]: Aux slot 3 created
+[11:30:45] [Render thread] [Sound Physics - General/INFO]: Aux slot 4 created
+[11:30:45] [Render thread] [Sound Physics - General/INFO]: EFX ready
+[11:30:45] [Render thread] [net.minecraft.class_1140/INFO]: Sound engine started
+[11:30:45] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[11:30:45] [Render thread] [net.minecraft.class_1059/INFO]: Created: 128x64x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[11:30:45] [Render thread] [net.minecraft.class_1059/INFO]: Created: 2048x1024x0 minecraft:textures/atlas/armor_trims.png-atlas
+[11:30:46] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[11:30:46] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[11:30:46] [Render thread] [net.minecraft.class_1059/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[11:30:46] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x256x0 minecraft:textures/atlas/chest.png-atlas
+[11:30:46] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[11:30:46] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x256x0 minecraft:textures/atlas/beds.png-atlas
+[11:30:46] [Render thread] [net.minecraft.class_1059/INFO]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[11:30:46] [Render thread] [net.minecraft.class_1059/INFO]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[11:30:46] [Render thread] [net.minecraft.class_1059/INFO]: Created: 256x256x0 minecraft:textures/atlas/signs.png-atlas
+[11:30:46] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x256x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[11:30:50] [Render thread] [axiom/INFO]: Using DearImGui config: config\axiom\imgui.ini
+[11:31:04] [Render thread] [ResourcePackLoader/INFO]: Added Default Profile to server list
+[11:31:04] [Render thread] [ResourcePackLoader/INFO]: Added 5 server entries to list (total: 6)
+[11:31:05] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 121
+[11:31:05] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:06] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 121
+[11:31:06] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:06] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 121
+[11:31:06] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:06] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:07] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:08] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 121
+[11:31:08] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:08] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 121
+[11:31:08] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:08] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:09] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 121
+[11:31:09] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:09] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:09] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:09] [Render thread] [ResourcePackLoader/INFO]: Adding server: 'www.rter' (normalized)
+[11:31:09] [Render thread] [ResourcePackLoader/INFO]: Setting profile for server: 'www.rter' (normalized: 'www.rter')
+[11:31:09] [Render thread] [ResourcePackLoader/INFO]: Created new profile for server: www.rter
+[11:31:09] [Render thread] [ResourcePackLoader/INFO]: Added Default Profile to server list
+[11:31:09] [Render thread] [ResourcePackLoader/INFO]: Added 6 server entries to list (total: 7)
+[11:31:10] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 7, PackList children: 120
+[11:31:10] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:10] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:10] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:11] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 7, PackList children: 120
+[11:31:11] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:11] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 7, PackList children: 120
+[11:31:11] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:11] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:12] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 7, PackList children: 120
+[11:31:12] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:12] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 7, PackList children: 120
+[11:31:12] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:12] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:13] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 7, PackList children: 120
+[11:31:13] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:13] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:21] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:21] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:22] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 7, PackList children: 120
+[11:31:22] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:22] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:23] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 7, PackList children: 120
+[11:31:23] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:23] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:23] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[11:31:25] [Render thread] [ResourcePackLoader/INFO]: Loaded server profile: 'localhost'
+[11:31:25] [Render thread] [ResourcePackLoader/INFO]: Loaded server profile: 'creative.server.net'
+[11:31:25] [Render thread] [ResourcePackLoader/INFO]: Loaded server profile: 'mineplex.com'
+[11:31:25] [Render thread] [ResourcePackLoader/INFO]: Loaded server profile: 'hypixel.net'
+[11:31:25] [Render thread] [ResourcePackLoader/INFO]: Loaded server profile: 'gommehd.net'
+[11:31:25] [Render thread] [ResourcePackLoader/INFO]: Loaded configuration with 5 server profile(s)
+[11:31:25] [Render thread] [ResourcePackLoader/INFO]: Configuration reloaded
+[11:31:25] [Render thread] [ResourcePackLoader/INFO]: Configuration reloaded
+[12:39:54] [Render thread] [net.minecraft.class_412/INFO]: Connecting to mace.diamondfire.games, 25565
+[12:39:58] [Render thread] [ChunkBuilder/INFO]: Started 1 worker threads
+[12:39:58] [Render thread] [ResourcePackLoader/INFO]: Joined server: mace.diamondfire.games
+[12:39:58] [Render thread] [ResourcePackLoader/INFO]: No profile configured for server: mace.diamondfire.games
+[12:39:58] [Render thread] [ShulkerBoxTooltip Plugins/INFO]: [ShulkerBoxTooltip Plugins] Loading 1 plugin: shulkerboxtooltip
+[12:39:58] [Render thread] [ShulkerBoxTooltip Plugins/INFO]: [ShulkerBoxTooltip Plugins] Registered 19 color keys for mod shulkerboxtooltip
+[12:39:58] [Render thread] [ShulkerBoxTooltip Plugins/INFO]: [ShulkerBoxTooltip Plugins] Registered 51 providers for mod shulkerboxtooltip
+[12:39:58] [Render thread] [voicechat/INFO]: [voicechat] Sending secret request to the server
+[12:39:58] [Render thread] [Sound Physics - General/INFO]: Initializing sound physics for voice chat audio
+[12:39:58] [Render thread] [Sound Physics - General/INFO]: Initializing Sound Physics
+[12:39:58] [Render thread] [Sound Physics - General/INFO]: EFX Extension recognized
+[12:39:58] [Render thread] [Sound Physics - General/INFO]: Max auxiliary sends: 2
+[12:39:58] [Render thread] [Sound Physics - General/INFO]: Aux slot 1 created
+[12:39:58] [Render thread] [Sound Physics - General/INFO]: Aux slot 2 created
+[12:39:58] [Render thread] [Sound Physics - General/INFO]: Aux slot 3 created
+[12:39:58] [Render thread] [Sound Physics - General/INFO]: Aux slot 4 created
+[12:39:58] [Render thread] [Sound Physics - General/INFO]: EFX ready
+[12:39:59] [Render thread] [litematica/INFO]: Using 3 total BufferAllocator caches
+[12:39:59] [Render thread] [net.minecraft.class_2512/WARN]: Unable to read property: west with value: "false" for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[12:39:59] [Render thread] [net.minecraft.class_2512/WARN]: Unable to read property: east with value: "false" for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[12:39:59] [Render thread] [net.minecraft.class_2512/WARN]: Unable to read property: south with value: "false" for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[12:39:59] [Render thread] [net.minecraft.class_2512/WARN]: Unable to read property: north with value: "false" for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[12:39:59] [Render thread] [net.minecraft.class_2512/WARN]: Unable to read property: west with value: "false" for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[12:39:59] [Render thread] [net.minecraft.class_2512/WARN]: Unable to read property: east with value: "false" for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[12:39:59] [Render thread] [net.minecraft.class_2512/WARN]: Unable to read property: south with value: "false" for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[12:39:59] [Render thread] [net.minecraft.class_2512/WARN]: Unable to read property: north with value: "false" for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[12:39:59] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ◆ Welcome back to DiamondFire! ◆
+[12:39:59] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] Current patch: 8.4. See the patch notes with /patch!
+[12:39:59] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] » Sending you to Private Node 14...
+[12:40:00] [Render thread] [ChunkBuilder/INFO]: Stopping worker threads
+[12:40:00] [Render thread] [FabricLoader/Mixin/INFO]: sodiumcoreshadersupport.mixins.json:MixinGLProgram from mod sodiumcoreshadersupport->@Accessor[FIELD_GETTER]::getLOGGER()Lorg/apache/logging/log4j/Logger; should be static as its target is
+[12:40:01] [Render thread] [ChunkBuilder/INFO]: Started 1 worker threads
+[12:40:01] [Render thread] [ResourcePackLoader/INFO]: Joined server: mace.diamondfire.games
+[12:40:01] [Render thread] [ResourcePackLoader/INFO]: No profile configured for server: mace.diamondfire.games
+[12:40:01] [Render thread] [voicechat/INFO]: [voicechat] Disconnecting from previous connection due to server change
+[12:40:01] [Render thread] [voicechat/INFO]: [voicechat] Clearing audio channels
+[12:40:01] [Render thread] [voicechat/INFO]: [voicechat] Sending secret request to the server
+[12:40:01] [Render thread] [Sound Physics - General/INFO]: Initializing sound physics for voice chat audio
+[12:40:01] [Render thread] [Sound Physics - General/INFO]: Initializing Sound Physics
+[12:40:01] [Render thread] [Sound Physics - General/INFO]: EFX Extension recognized
+[12:40:01] [Render thread] [Sound Physics - General/INFO]: Max auxiliary sends: 2
+[12:40:01] [Render thread] [Sound Physics - General/INFO]: Aux slot 1 created
+[12:40:01] [Render thread] [Sound Physics - General/INFO]: Aux slot 2 created
+[12:40:01] [Render thread] [Sound Physics - General/INFO]: Aux slot 3 created
+[12:40:01] [Render thread] [Sound Physics - General/INFO]: Aux slot 4 created
+[12:40:01] [Render thread] [Sound Physics - General/INFO]: EFX ready
+[12:40:01] [Render thread] [litematica/INFO]: Using 3 total BufferAllocator caches
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.vsh
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.vsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_vertex.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_matrices.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.fsh
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.fsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_material.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [net.caffeinemc.mods.sodium.client.gl.shader.GlProgram/WARN]: Error while binding uniform: Unknown Error, code: 0
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.vsh
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.vsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_vertex.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_matrices.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.fsh
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.fsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_material.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [net.caffeinemc.mods.sodium.client.gl.shader.GlProgram/WARN]: Error while binding uniform: Unknown Error, code: 0
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.vsh
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.vsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_vertex.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_matrices.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.fsh
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.fsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_material.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:02] [Render thread] [net.caffeinemc.mods.sodium.client.gl.shader.GlProgram/WARN]: Error while binding uniform: Unknown Error, code: 0
+[12:40:02] [Render thread] [net.minecraft.class_2983/INFO]: [STDOUT]: [Hit-Color] Version check failed: HTTP error 404
+[12:40:02] [Render thread] [net.minecraft.class_11280/INFO]: Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[12:40:02] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] » Joined game: ☆ Mace Roulette by flopsuh.
+[12:40:02] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] Note: This plot may hide, log, or change your chat messages. Use /gchat or /gc to bypass and talk to global chat.
+[12:40:02] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] + {MINECRAFT_USERNAME}
+[12:40:02] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] \n ⏵ Current Patch (December 28th): 1.8.2 - (Click to view) \n
+[12:40:02] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] \n» The plot's resource pack was automatically enabled due to your preference.\n  [Disable]\n
+[12:40:03] [Download-4] [net.minecraft.class_3521/INFO]: Returning cached file since actual hash matches requested
+[12:40:04] [Render thread] [net.minecraft.class_11280/INFO]: Resizing Dynamic Transforms UBO, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[12:40:04] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ GSB_DELETE was eliminated by Flash000z! (86 remain)
+[12:40:04] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ player_gamee was eliminated by ShadowRuneXX! (85 remain)
+[12:40:04] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ᴘʟᴀʏᴇʀ [4hr16m ⌚] nbs123456: hf
+[12:40:04] [Render thread] [net.minecraft.class_3279/INFO]: Found non-pack entry 'C:\Users\Christoph Bruehl\AppData\Roaming\ModrinthApp\profiles\OPSUCHT 1.0.0\resourcepacks\Clean Connected Glass [1.21.5+].zip.disabled', ignoring
+[12:40:04] [Render thread] [net.minecraft.class_3255/ERROR]: Couldn't load file/NoFog V1.zip pack metadata: Pack declares support for version newer than 64, but is missing mandatory fields min_format and max_format
+[12:40:04] [Render thread] [net.minecraft.class_3255/ERROR]: Couldn't load file/NoFog V1.zip overlays metadata: Overlay "overlay_99" declares support for version newer than 64, but is missing mandatory fields min_format and max_format
+[12:40:04] [Render thread] [net.minecraft.class_3255/ERROR]: Couldn't load file/PVP SMP Deluxe V2.3.zip pack metadata: Pack declares support for version newer than 64, but is missing mandatory fields min_format and max_format
+[12:40:04] [Render thread] [net.minecraft.class_3255/ERROR]: Couldn't load file/Spunky Pack Classic.zip pack metadata: com.google.gson.stream.MalformedJsonException: Unterminated object at line 5 column 10 path $.pack.supported_formats
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+[12:40:04] [Render thread] [net.minecraft.class_3255/ERROR]: Couldn't load file/Spunky Pack Classic.zip pack metadata: com.google.gson.stream.MalformedJsonException: Unterminated object at line 5 column 10 path $.pack.supported_formats
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+[12:40:04] [Render thread] [net.minecraft.class_3288/WARN]: Missing metadata in pack file/Spunky Pack Classic.zip
+[12:40:04] [Render thread] [net.minecraft.class_3304/INFO]: Reloading ResourceManager: vanilla, fabric, antitoolbreak, appleskin, armor_hud, axiom, balm, boxlib, chat-binds, chatnotify, cloth-config, conditional-mixin, continuity, crosshairindicator, cullleaves, dynamic_fps, entityculling, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fanetlib, flashback, forgeconfigapiport, freecam, gammautils, hit-color, hitrange, immediatelyfast, krypton, lattice, lightweight-inventory-sorting, litematica, litematica-server-paster, litematica_printer, lithium, malilib, midnightlib, modmenu, moreculling, noisium, placeholder-api, polymer-blocks, polymer-core, polymer-resource-pack, puzzleslib, pvpmusic, resourcepack-loader, shulkerboxtooltip, sodium, sodium-extra, sodiumcoreshadersupport, sound_physics_remastered, toggle-sprint-display, trender, ukulib, voicechat, worldedit, yet_another_config_lib_v3, zoomify, black_icons, file/LowOnFire v1.21.9§8.zip, file/PVP SMP Deluxe V2.3.zip, server/00000000/5c89be80-db99-3068-9723-ee026c98e4bf
+[12:40:05] [Worker-Main-28] [net.minecraft.class_391/INFO]: Found unifont_all_no_pua-16.0.03.hex, loading
+[12:40:06] [Worker-Main-28] [net.minecraft.class_391/INFO]: Found unifont_jp_patch-16.0.03.hex, loading
+[12:40:06] [Worker-Main-28] [net.minecraft.class_391/INFO]: Found unifont_pua-16.0.03.hex, loading
+[12:40:06] [Render thread] [net.minecraft.class_11280/INFO]: Resizing Dynamic Transforms UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[12:40:07] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ sameli2 was eliminated by monke1004! (84 remain)
+[12:40:07] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [173.63K☆ (#65)] BenbiKing: w
+[12:40:07] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [51hr50m ⌚ (#455)] ListoekYT: n1 flash
+[12:40:07] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ Illuxtryz was eliminated by Gulthedog! (83 remain)
+[12:40:07] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ᴘʟᴀʏᴇʀ [1.06K☆] DekeMat2024: w
+[12:40:07] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ᴘʟᴀʏᴇʀ [893☆] Drache4123: hg
+[12:40:07] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [522.1K☆ (#14)] Igozy: n1
+[12:40:08] [Worker-Main-28] [Sodium Core Shader Support/INFO]: Loading shaders...
+[12:40:08] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]: nameSpace: minecraft
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_water_mask.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/globals.glsl: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_leash.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/rotscale.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_translucent_moving_block.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_decal.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/fog.glsl: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/panorama.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/bits.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_water_mask.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_end_portal.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/stars.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_leash.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/terrain.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/entity_sobel.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_translucent_moving_block.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/projection.glsl: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/gui.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/entity_outline_box_blur.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_beacon_beam.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/transparency.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_clouds.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_crumbling.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/sky.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/terrain.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/gui.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/color_convolve.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_color.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_beacon_beam.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/dynamictransforms.glsl: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_see_through.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_clouds.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/box_blur.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/blit.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_color.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_item_entity_translucent_cull.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_tex_color.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_background_see_through.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_see_through.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_lightning.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_shadow.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/matrix.glsl: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/entity.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/glint.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_tex_color.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_background.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_background_see_through.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_crumbling.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_item_entity_translucent_cull.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/sky.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_shadow.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_outline.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/light.glsl: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/entity.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/invert.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/glint.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_background.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/screenquad.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/lightmap.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_world_border.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/stars.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/particle.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_tex.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_alpha.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_lines.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_outline.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_intensity_see_through.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     post/spiderclip.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_intensity.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_lightning.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_lines.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_world_border.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/particle.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_tex.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_alpha.fsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_intensity_see_through.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_entity_decal.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_end_portal.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/panorama.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/rendertype_text_intensity.vsh: Default
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]: nameSpace: sodium
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/chunk_matrices.glsl: Fabric Mod "Sodium"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     blocks/block_layer_opaque.fsh: Fabric Mod "Sodium"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     blocks/block_layer_opaque.vsh: Fabric Mod "Sodium"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/chunk_vertex.glsl: Fabric Mod "Sodium"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/fog.glsl: Fabric Mod "Sodium"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     include/chunk_material.glsl: Fabric Mod "Sodium"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]: nameSpace: flashback
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_old.vsh: Fabric Mod "Flashback"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_old.fsh: Fabric Mod "Flashback"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/screenquad_flip.vsh: Fabric Mod "Flashback"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_round_alpha.fsh: Fabric Mod "Flashback"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]: nameSpace: malilib
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     sv_selector.frag: Fabric Mod "MaLiLib"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]: nameSpace: axiom
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/selection_outline.vsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/collision_mesh.vsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_block.vsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_old.fsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/brighten_lightmap.json: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_old.json: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/border.fsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/selection_outline.fsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/selection_outline.json: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/border.vsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_color_no_vertex_color.fsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_color_no_vertex_color.json: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/collision_mesh.json: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_lines.fsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/block.vsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/position_color_no_vertex_color.vsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/border.json: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/block.json: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/blit_screen_old.vsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/collision_mesh.fsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_block.fsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_lines.json: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_block.json: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/brighten_lightmap.fsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/instanced_lines.vsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-28] [net.minecraft.class_2983/INFO]: [STDOUT]:     core/block.fsh: Fabric Mod "Axiom"
+[12:40:09] [Worker-Main-22] [net.minecraft.class_7764/WARN]: Unused frames in sprite minecraft:item/mace_skins/stardust: [18]
+[12:40:09] [Worker-Main-23] [net.minecraft.class_7766/WARN]: Texture maceroulette:item/gui_elements/shop/rank/blaze with size 127x37 limits mip level from 4 to 0
+[12:40:09] [Worker-Main-23] [net.minecraft.class_7766/WARN]: minecraft:textures/atlas/blocks.png: dropping miplevel from 4 to 0, because of minimum power of two: 1
+[12:40:09] [Worker-Main-21] [net.minecraft.class_10097/WARN]: Missing block model: minecraft:item/glow_achievements/frameicon
+[12:40:09] [Worker-Main-21] [net.minecraft.class_10097/WARN]: Missing block model: minecraft:item/achievements/frameicon
+[12:40:09] [Worker-Main-21] [net.minecraft.class_10097/WARN]: Missing block model: minecraft:builtin/entity
+[12:40:10] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ᴘʟᴀʏᴇʀ [25.71K☆] Illuxtryz: gl
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model minecraft:item/gui/moon25:
+    #missing
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model maceroulette:gui_elements/shop/moons/250:
+    particle
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model minecraft:block/structure_void:
+    particle
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model maceroulette:gui_elements/shop/moons/100:
+    particle
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model maceroulette:gui_elements/shop/sparks_hint:
+    particle
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model maceroulette:gui_elements/shop/rank/maximum:
+    particle
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model maceroulette:gui_elements/shop/rank/breeze:
+    particle
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model maceroulette:gui_elements/shop/config/none:
+    particle
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model minecraft:block/moving_piston:
+    particle
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model minecraft:item/gui/spark:
+    #missing
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model minecraft:item/gui/moon100:
+    #missing
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model maceroulette:gui_elements/shop/moons/50:
+    particle
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model minecraft:item/gui/moon50:
+    #missing
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model minecraft:item/gui/purchase:
+    #missing
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model maceroulette:gui_elements/shop/config/blaze:
+    particle
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model minecraft:item/gui/patch:
+    #missing
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model maceroulette:gui_elements/shop/config/breeze:
+    particle
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model minecraft:item/gui/help:
+    #missing
+[12:40:10] [Worker-Main-17] [net.minecraft.class_1092/WARN]: Missing texture references in model maceroulette:gui_elements/shop/rank/blaze:
+    particle
+[12:40:10] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ᴘʟᴀʏᴇʀ [893☆] Drache4123: gl hf
+[12:40:10] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ᴘʟᴀʏᴇʀ [54.59K☆ (#342)] BigRuler_: i like cheese
+[12:40:13] [Render thread] [net.minecraft.class_1140/WARN]: Missing sound for event: pvpmusic:battle_music
+[12:40:13] [Render thread] [net.minecraft.class_4225/INFO]: OpenAL initialized on device OpenAL Soft on Lautsprecher/Kopfhörer (Realtek Audio)
+[12:40:13] [Render thread] [Sound Physics - General/INFO]: Initializing Sound Physics
+[12:40:13] [Render thread] [Sound Physics - General/INFO]: EFX Extension recognized
+[12:40:13] [Render thread] [Sound Physics - General/INFO]: Max auxiliary sends: 4
+[12:40:13] [Render thread] [Sound Physics - General/INFO]: Aux slot 1 created
+[12:40:13] [Render thread] [Sound Physics - General/INFO]: Aux slot 2 created
+[12:40:13] [Render thread] [Sound Physics - General/INFO]: Aux slot 3 created
+[12:40:13] [Render thread] [Sound Physics - General/INFO]: Aux slot 4 created
+[12:40:13] [Render thread] [Sound Physics - General/INFO]: EFX ready
+[12:40:13] [Render thread] [net.minecraft.class_1140/INFO]: Sound engine started
+[12:40:13] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 128x64x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 2048x1024x0 minecraft:textures/atlas/armor_trims.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 1024x1024x0 minecraft:textures/atlas/blocks.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x256x0 minecraft:textures/atlas/chest.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x256x0 minecraft:textures/atlas/beds.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 256x256x0 minecraft:textures/atlas/signs.png-atlas
+[12:40:14] [Render thread] [net.minecraft.class_1059/INFO]: Created: 512x256x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[12:40:15] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]                    Round 2
+[12:40:15] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ ᴅᴏᴜʙʟᴇ ᴍᴏᴅɪꜰɪᴇʀ:
+[12:40:15] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]   ◇ Shockwave Mace (☁ Boosted by SnapBubble00, Mythium420)
+[12:40:15] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]   ◇ Miss = Die
+[12:40:15] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ᴘʟᴀʏᴇʀ [266☆] 4_wow: is compost smash effect good?
+[12:40:15] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] SuperEnder5 joined.
+[12:40:15] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] + SuperEnder5
+[12:40:15] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] CleanAce6263 joined.
+[12:40:15] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] + CleanAce6263
+[12:40:15] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [❄ BB'25 - 9🪓] Flash000z: naw
+[12:40:15] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ 🎁 [1919🪓 (#86)] _Kocza_: i gtg cya
+[12:40:15] [Render thread] [ChunkBuilder/INFO]: Stopping worker threads
+[12:40:15] [Render thread] [ChunkBuilder/INFO]: Started 1 worker threads
+[12:40:16] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ShivayOriginal left.
+[12:40:16] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [404🪓] Coach_WasHere: HIT :D?
+[12:40:16] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] Illuxtryz left.
+[12:40:17] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [196.47K☆ (#57)] ShadowRuneXX: cya
+[12:40:17] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ _Kocza_ fell off the map! (82 remain)
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.vsh
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.vsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_vertex.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_matrices.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.fsh
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.fsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_material.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [net.caffeinemc.mods.sodium.client.gl.shader.GlProgram/WARN]: Error while binding uniform: Unknown Error, code: 0
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.vsh
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.vsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_vertex.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_matrices.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.fsh
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.fsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_material.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [net.caffeinemc.mods.sodium.client.gl.shader.GlProgram/WARN]: Error while binding uniform: Unknown Error, code: 0
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.vsh
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.vsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_vertex.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_matrices.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Start loading shader in namespace 'sodium': blocks/block_layer_opaque.fsh
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:blocks/block_layer_opaque.fsh' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/fog.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [Sodium Core Shader Support/INFO]: Loaded Shader 'sodium:include/chunk_material.glsl' from pack 'Fabric Mod "Sodium"'.
+[12:40:18] [Render thread] [net.caffeinemc.mods.sodium.client.gl.shader.GlProgram/WARN]: Error while binding uniform: Unknown Error, code: 0
+[12:40:18] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] player_gamee left.
+[12:40:18] [Render thread] [ResourcePackLoader/INFO]: Added Default Profile to server list
+[12:40:18] [Render thread] [ResourcePackLoader/INFO]: Added 5 server entries to list (total: 6)
+[12:40:19] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ Moses752 left while alive! (81 remain)
+[12:40:19] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] Moses752 left.
+[12:40:19] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [❄ BB'25 - 9🪓] Flash000z: cya
+[12:40:19] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] _Kocza_ left.
+[12:40:20] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:20] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ PIOOCHE2024 earned the Lifesaver achievement! (Hover for info)
+[12:40:22] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 122
+[12:40:22] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:22] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ᴘʟᴀʏᴇʀ [0.56 ᴋᴅʀ] nootkje: l
+[12:40:23] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 122
+[12:40:23] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:23] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [❄ BB'25 - 9🪓] Flash000z: tf
+[12:40:23] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ᴘʟᴀʏᴇʀ [893☆] Drache4123: lol
+[12:40:24] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ᴘʟᴀʏᴇʀ [25🪓] _pixlie_: l
+[12:40:24] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [522.1K☆ (#14)] Igozy: nt
+[12:40:24] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]                    Round 3
+[12:40:24] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ ᴅᴏᴜʙʟᴇ ᴍᴏᴅɪꜰɪᴇʀ:
+[12:40:24] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]   ◇ Double Mace
+[12:40:24] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]   ◇ Caged!
+[12:40:26] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:26] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [404🪓] Coach_WasHere: ok so how did he survived...
+[12:40:27] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:27] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ 🎁 [822🪓 (#240)] OwOAuraOwO: bai kocza
+[12:40:27] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [❄ BB'25 - 25🪓] _kitcats_: Flash000z cya
+[12:40:27] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ 🎁 [186.83K☆ (#62)] __rezz: i request mace
+[12:40:28] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:28] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ᴘʟᴀʏᴇʀ [0☆] EddieScar: lag?
+[12:40:28] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [48% Accurate] QuiteNewToMe: _Kocza left
+[12:40:29] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 122
+[12:40:29] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:29] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] OrbitzX joined.
+[12:40:29] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] GSB_DELETE left.
+[12:40:29] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] + OrbitzX
+[12:40:30] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:30] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] player_gamee joined.
+[12:40:31] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] + player_gamee
+[12:40:31] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:32] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [522.1K☆ (#14)] Igozy: rip _kocza_ :c
+[12:40:33] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 122
+[12:40:33] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:33] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:33] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:33] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ andytwoods fell off the map! (80 remain)
+[12:40:33] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ Boltzzz__ was eliminated by nootkje! (79 remain)
+[12:40:34] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:34] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:34] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ LennardNimmo was eliminated by Frostywuzei! (78 remain)
+[12:40:34] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ Vastcityx was eliminated by Frostywuzei! (77 remain)
+[12:40:35] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 122
+[12:40:35] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:35] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:36] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:36] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] andytwoods left.
+[12:40:36] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [173.63K☆ (#65)] BenbiKing: nice
+[12:40:37] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 122
+[12:40:37] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:37] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] palacsinta006 joined.
+[12:40:37] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] + palacsinta006
+[12:40:37] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [522.1K☆ (#14)] Igozy: n1
+[12:40:39] [Render thread] [ResourcePackLoader/INFO]: ConfigScreen.render() - ServerList children: 6, PackList children: 122
+[12:40:39] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:39] [Render thread] [ResourcePackLoader/INFO]: ServerEntry.render() called for: Default Profile
+[12:40:39] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] OrbitzX left.
+[12:40:39] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ ListoekYT fell off the map! (76 remain)
+[12:40:39] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] HarryTheDude joined.
+[12:40:40] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] + HarryTheDude
+[12:40:41] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [❄ BB'25 - 9🪓] Flash000z: Kocza saved him from m=d
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [196.47K☆ (#57)] ShadowRuneXX: rip Listoek
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [196.47K☆ (#57)] ShadowRuneXX: rip Listoek
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]                    Round 4
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ ᴛʀɪᴘʟᴇ ᴍᴏᴅɪꜰɪᴇʀ:
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]   ◇ Pillars (☁ Boosted by Wadlu_TheJocker, _kitcats_)
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]   ◇ Player Blocks
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]   ◇ Shockwave Mace (☁ Boosted by SnapBubble00, Mythium420)
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]                    Round 4
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ ᴛʀɪᴘʟᴇ ᴍᴏᴅɪꜰɪᴇʀ:
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]   ◇ Pillars (☁ Boosted by Wadlu_TheJocker, _kitcats_)
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]   ◇ Player Blocks
+[12:40:42] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT]   ◇ Shockwave Mace (☁ Boosted by SnapBubble00, Mythium420)
+[12:40:43] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] Vastcityx left.
+[12:40:44] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [522.1K☆ (#14)] Igozy: anyone else still needs headless horseman? (i just dont wanna boost piniata anymore)
+[12:40:44] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [522.1K☆ (#14)] Igozy: anyone else still needs headless horseman? (i just dont wanna boost piniata anymore)
+[12:40:44] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [522.1K☆ (#14)] Igozy: anyone else still needs headless horseman? (i just dont wanna boost piniata anymore)
+[12:40:44] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [522.1K☆ (#14)] Igozy: anyone else still needs headless horseman? (i just dont wanna boost piniata anymore)
+[12:40:44] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ FairyGrinder67 left while alive! (75 remain)
+[12:40:44] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] FairyGrinder67 left.
+[12:40:44] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [51hr50m ⌚ (#455)] ListoekYT: Bro :sob:
+[12:40:44] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ FairyGrinder67 left while alive! (75 remain)
+[12:40:44] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] FairyGrinder67 left.
+[12:40:44] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ʙʟᴀᴢᴇ [51hr50m ⌚ (#455)] ListoekYT: Bro :sob:
+[12:40:46] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ EddieScar left while alive! (74 remain)
+[12:40:46] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] EddieScar left.
+[12:40:46] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ EddieScar left while alive! (74 remain)
+[12:40:46] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] EddieScar left.
+[12:40:46] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ EddieScar left while alive! (74 remain)
+[12:40:46] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] EddieScar left.
+[12:40:46] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ EddieScar left while alive! (74 remain)
+[12:40:46] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] EddieScar left.
+[12:40:46] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] ⏵ EddieScar left while alive! (74 remain)
+[12:40:46] [Render thread] [net.minecraft.class_338/INFO]: [System] [CHAT] EddieScar left.

@@ -1,0 +1,24 @@
+Status (Stand: 2026-01-02)
+
+Erledigt
+- Build repariert: `bash scripts/bugfix.sh` läuft wieder durch.
+- GUI: Klick-Probleme/Widget-Visibility wurden früher gefixt (Textfeld + Listen werden gezeichnet).
+- Pack-Modi UI: 3 Zustände sichtbar (M = manuell, ✓ = auto laden, ✗ = auto entladen).
+
+Aktuelle Probleme (laut TODO + deinen Infos)
+- Serverliste: Einträge sind teils „da“, aber Text/Server (z.B. gommehd.net) wird im Screen nicht sichtbar.
+- Icons/Favicons: werden nicht angezeigt.
+- „Phantom“-Einträge: Server stehen in der Config, obwohl du sie nicht bewusst hinzugefügt hast.
+- „www.ww“: Du sagst, du hast es geaddet, aber es taucht nicht in der geposteten Config auf.
+
+Wichtige Beobachtung
+- Deine `latest.log` zeigt Minecraft 1.21.10.
+- Im Repo ist in `gradle.properties` aktuell Minecraft 1.21.11 konfiguriert.
+  -> Das kann zu API-/GUI-Signatur-Differenzen führen und erklärt, warum Rendering-Änderungen zwischen Versionen „komisch“ wirken.
+
+Nächste Schritte (konkret)
+1) Versionen angleichen: Entscheiden ob das Mod-Projekt 1.21.10 oder 1.21.11 targetet (Yarn/Fabric passend), damit GUI-APIs stabil sind.
+2) Serverliste sichtbar machen: Rendering in `ServerListWidget` so umbauen, dass es sicher mit der 1.21.10-Signatur arbeitet (korrekte x/y/entryWidth/clip) und Text immer im sichtbaren Bereich landet.
+3) „Phantom“-Einträge klären: prüfen, ob sie aus einer alten Config stammen oder ob beim Laden/Speichern normalisierte Keys doppelt entstehen.
+4) „www.ww“ Add-Flow prüfen: Log-Ausgabe beim Add-Button + direkt nach Save; sicherstellen, dass `saveConfig()` wirklich geschrieben wird und GUI nicht versehentlich „Cancel“-Reload triggert.
+5) Favicon: prüfen ob die Server in der Multiplayer-Liste gespeichert sind und ob es eine stabile API für Favicons in 1.21.10 gibt; ansonsten sauberer Fallback (kein Crash, kein Spam).

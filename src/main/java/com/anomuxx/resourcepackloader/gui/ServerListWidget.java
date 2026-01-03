@@ -28,8 +28,9 @@ public class ServerListWidget extends EntryListWidget<ServerListWidget.ServerEnt
     private static final Map<String, String> FAVICON_BY_ADDRESS = new ConcurrentHashMap<>();
     private static final Map<String, Identifier> ICON_ID_BY_ADDRESS = new ConcurrentHashMap<>();
     
-    public ServerListWidget(MinecraftClient client, int width, int height, int top, int bottom, int itemHeight, ConfigScreen parent) {
-        super(client, width, height, top, itemHeight);
+    public ServerListWidget(MinecraftClient client, int width, int bottom, int top, int itemHeight, ConfigScreen parent) {
+        // Use constructor height parameter as bottom boundary for render area
+        super(client, width, bottom, top, itemHeight);
         this.parent = parent;
     }
     
@@ -58,8 +59,9 @@ public class ServerListWidget extends EntryListWidget<ServerListWidget.ServerEnt
 
     @Override
     public boolean mouseClicked(Click click, boolean doubleClick) {
+        // Only handle clicks within the actual list boundaries
         if (!this.isMouseOver(click.x(), click.y())) {
-            return super.mouseClicked(click, doubleClick);
+            return false;
         }
 
         if (click.button() == 0) {
@@ -85,6 +87,10 @@ public class ServerListWidget extends EntryListWidget<ServerListWidget.ServerEnt
             this.serverAddress = serverAddress;
             this.list = list;
         }
+
+        public String getServerAddress() {
+            return this.serverAddress;
+        }
         
         @Override
         public void render(DrawContext context, int mouseX, int mouseY, boolean hovered, float delta) {
@@ -106,17 +112,11 @@ public class ServerListWidget extends EntryListWidget<ServerListWidget.ServerEnt
                 context.fill(entryX, entryY, entryX + entryWidth, entryY + entryHeight, 0x40FFFFFF);
             }
             
-            // Server Name mit Pack-Anzahl
+            // Server Name ohne Pack-Anzahl
             String label = serverAddress;
-            ServerProfile profile = list.parent.getProfileForServerEntry(serverAddress);
-            if (profile != null && !profile.isEmpty()) {
-                int enableCount = profile.getEnable().size();
-                int disableCount = profile.getDisable().size();
-                label = label + " (" + enableCount + "/" + disableCount + ")";
-            }
             
             // Schriftfarbe: Hellrot (ausgewählt) oder Weiß (normal)
-            int textColor = selected ? 0xFF5555 : 0xFFFFFF;
+            int textColor = selected ? 0xFFFF5555 : 0xFFFFFFFF;
             
             context.drawTextWithShadow(
                 MinecraftClient.getInstance().textRenderer,

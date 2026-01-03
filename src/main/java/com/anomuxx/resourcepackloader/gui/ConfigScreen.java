@@ -31,6 +31,9 @@ public class ConfigScreen extends Screen {
     private ButtonWidget removeServerButton;
     private ButtonWidget saveButton;
     private ButtonWidget cancelButton;
+    private ButtonWidget filterButton;
+
+    private boolean showOnlyResourcePacks = false;
     
     private String selectedServer = null;
     
@@ -60,7 +63,7 @@ public class ConfigScreen extends Screen {
         this.serverAddressField = new TextFieldWidget(
             this.textRenderer,
             this.width / 2 - 152,
-            40,
+            22,
             200,
             20,
             Text.literal("Server Address")
@@ -73,16 +76,18 @@ public class ConfigScreen extends Screen {
         this.addServerButton = ButtonWidget.builder(
             Text.literal("Add Server"),
             button -> addServer()
-        ).dimensions(this.width / 2 + 55, 40, 100, 20).build();
+        ).dimensions(this.width / 2 + 55, 22, 100, 20).build();
         this.addDrawableChild(this.addServerButton);
         
         // Server list (left side)
+        // Significantly reduce height so list stays within black background and above Remove button
+        int listBottom = removeButtonY - 30;
+
         this.serverList = new ServerListWidget(
             this.client,
             listWidth,
-            listHeight,
+            listBottom,
             topListY,
-            removeButtonY,
             25,
             this
         );
@@ -104,14 +109,24 @@ public class ConfigScreen extends Screen {
         this.packList = new PackListWidget(
             this.client,
             listWidth,
-            listHeight,
+            listBottom,
             topListY,
-            removeButtonY,
             25,
             this
         );
         this.packList.setX(this.width - listWidth - margin);
         this.addDrawableChild(this.packList);
+
+        // Filter toggle above pack list
+        this.filterButton = ButtonWidget.builder(
+            Text.literal("Filter: All"),
+            button -> {
+                this.showOnlyResourcePacks = !this.showOnlyResourcePacks;
+                button.setMessage(Text.literal(this.showOnlyResourcePacks ? "Filter: Resourcepacks" : "Filter: All"));
+                updatePackList();
+            }
+        ).dimensions(this.width - listWidth - margin, topListY - 24, listWidth, 20).build();
+        this.addDrawableChild(this.filterButton);
         
         // Default selection so the user sees something immediately
         if (this.selectedServer == null) {
@@ -154,24 +169,25 @@ public class ConfigScreen extends Screen {
         int removeButtonY = bottomButtonsY - 25;
         
         // Hintergrund für Server-Liste (links) - ersetzt den Button-Look
-        context.fill(margin, topListY, margin + listWidth, removeButtonY, 0xC0101010);
+        context.fill(margin, topListY, margin + listWidth, removeButtonY - 30, 0xC0101010);
         // Hintergrund für Pack-Liste (rechts)
-        context.fill(this.width - listWidth - margin, topListY, this.width - margin, removeButtonY, 0xC0101010);
+        context.fill(this.width - listWidth - margin, topListY, this.width - margin, removeButtonY - 30, 0xC0101010);
         
         // Render widgets first
         super.render(context, mouseX, mouseY, delta);
         
         // Render title
-        context.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 15, 0xFFFFFF);
+        context.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 15, 0xFFFFFFFF);
         
-        // Render section labels
-        context.drawTextWithShadow(this.textRenderer, "Server Profiles:", 10, 70 - 12, 0xFFFFFF);
-        context.drawTextWithShadow(this.textRenderer, "Resource Packs:", this.width - 160, 70 - 12, 0xFFFFFF);
+        // Render section labels (align to lists)
+        int labelY = topListY - 12;
+        context.drawTextWithShadow(this.textRenderer, "Server Profiles:", margin, labelY, 0xFFFFFFFF);
+        // Pack list label is now in the filter button, no separate label needed
         
         // Render selected server info
         if (selectedServer != null) {
             String info = "Selected: " + selectedServer;
-            context.drawTextWithShadow(this.textRenderer, info, 170, 70 - 12, 0xAAAAAA);
+            context.drawTextWithShadow(this.textRenderer, info, this.width / 2 - 40, labelY, 0xFFAAAAAA);
         }
     }
     
@@ -217,12 +233,25 @@ public class ConfigScreen extends Screen {
      * Remove the selected server profile.
      */
     private void removeServer() {
-        if (selectedServer != null) {
-            config.removeServerProfile(selectedServer);
-            selectedServer = null;
-            updateServerList();
-            updatePackList();
+        if (selectedServer == null) {
+            return;
         }
+
+        if ("Default Profile".equals(selectedServer)) {
+            // Clear default profile instead of deleting the entry so the UI stays consistent
+            config.setDefaultProfile(new ServerProfile());
+            updatePackList();
+            return;
+        }
+
+        // Clear selection BEFORE removing to prevent auto-reselection
+        String toRemove = selectedServer;
+        selectedServer = null;
+        this.serverList.setSelected(null);
+        
+        config.removeServerProfile(toRemove);
+        updateServerList();
+        updatePackList();
     }
     
     /**
@@ -276,6 +305,18 @@ public class ConfigScreen extends Screen {
         ResourcePackLoader.LOGGER.info("Added {} server entries to list (total: {})", count, count + 1);
         System.out.println("ServerList.children().size() = " + this.serverList.children().size());
         System.out.println("=== updateServerList() END ===");
+
+        // Reselect previously chosen server if it still exists (only if we have a selection)
+        if (this.selectedServer != null) {
+            ServerListWidget.ServerEntry toSelect = null;
+            for (ServerListWidget.ServerEntry entry : this.serverList.children()) {
+                if (entry != null && this.selectedServer.equals(entry.getServerAddress())) {
+                    toSelect = entry;
+                    break;
+                }
+            }
+            this.serverList.setSelected(toSelect);
+        }
     }
     
     /**
@@ -289,7 +330,7 @@ public class ConfigScreen extends Screen {
         }
         
         // Get all available packs
-        List<String> allPacks = PackManager.getAllAvailablePacks();
+        List<String> allPacks = PackManager.getAllAvailablePacks(this.showOnlyResourcePacks);
         Set<String> available = new HashSet<>(allPacks);
         
         // Get profile for selected server
@@ -365,9 +406,9 @@ public class ConfigScreen extends Screen {
      * Enum for pack state in profile.
      */
     public enum PackState {
-        NEUTRAL("M", 0xAAAAAA),    // Manual (no automatic change)
-        ENABLE("✓", 0x55FF55),     // Auto-load on this server
-        DISABLE("✗", 0xFF5555);    // Auto-unload on this server
+        NEUTRAL("M", 0xFFAAAAAA),    // Manual (no automatic change)
+        ENABLE("✓", 0xFF55FF55),     // Auto-load on this server
+        DISABLE("✗", 0xFFFF5555);    // Auto-unload on this server
         
         public final String symbol;
         public final int color;

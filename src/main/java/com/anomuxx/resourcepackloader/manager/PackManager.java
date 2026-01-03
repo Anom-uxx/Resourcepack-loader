@@ -1,17 +1,22 @@
 package com.anomuxx.resourcepackloader.manager;
 
 import com.anomuxx.resourcepackloader.config.ServerProfile;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.resource.ResourcePackManager;
 import net.minecraft.resource.ResourcePackProfile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.Set;
 
 /**
  * Manages resource pack enabling/disabling without triggering the full Mojang reload screen.
@@ -130,6 +135,14 @@ public class PackManager {
      * @return List of all pack names
      */
     public static List<String> getAllAvailablePacks() {
+        return getAllAvailablePacks(false);
+    }
+
+    /**
+     * Get available resource packs with optional filtering to show only packs that come from the user's resourcepacks folder
+     * (folders or zip files). This avoids showing mod-provided built-ins when the filter is enabled.
+     */
+    public static List<String> getAllAvailablePacks(boolean resourcePacksOnly) {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client == null) {
             return new ArrayList<>();
@@ -140,12 +153,59 @@ public class PackManager {
             return new ArrayList<>();
         }
         
+        Set<String> localPackIds = resourcePacksOnly ? getLocalResourcePackIds() : Set.of();
+
         List<String> packs = new ArrayList<>();
         for (ResourcePackProfile profile : packManager.getProfiles()) {
-            packs.add(profile.getId());
+            String id = profile.getId();
+            String idLower = id.toLowerCase();
+
+            if (resourcePacksOnly) {
+                // Show user/vanilla packs; hide obvious mod-provided packs unless they match a local file/folder name
+                String tail = id.contains("/") ? id.substring(id.lastIndexOf('/') + 1) : id;
+                String tailLower = tail.toLowerCase();
+                boolean matchesLocal = localPackIds.contains(idLower) || localPackIds.contains(tailLower);
+                String display = profile.getDisplayName().getString();
+                boolean looksMod = display.startsWith("Fabric Mod ") || idLower.startsWith("fabric/") || idLower.startsWith("mod/");
+
+                if (looksMod && !matchesLocal) {
+                    continue;
+                }
+            }
+
+            packs.add(id);
         }
-        
+
         return packs;
+    }
+
+    /**
+     * Collect ids that correspond to items in the resourcepacks/ folder (zip or directory). The id is assumed to be
+     * the base file/folder name without the .zip extension.
+     */
+    private static Set<String> getLocalResourcePackIds() {
+        MinecraftClient client = MinecraftClient.getInstance();
+        if (client == null) {
+            return Set.of();
+        }
+
+        Path dir = FabricLoader.getInstance().getGameDir().resolve("resourcepacks");
+        if (!Files.isDirectory(dir)) {
+            return Set.of();
+        }
+
+        Set<String> ids = new HashSet<>();
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
+            for (Path p : stream) {
+                String name = p.getFileName().toString();
+                if (name.toLowerCase().endsWith(".zip")) {
+                    name = name.substring(0, name.length() - 4);
+                }
+                ids.add(name.toLowerCase());
+            }
+        } catch (Exception ignored) {
+        }
+        return ids;
     }
     
     /**

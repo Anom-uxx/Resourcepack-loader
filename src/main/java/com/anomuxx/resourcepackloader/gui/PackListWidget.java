@@ -14,8 +14,9 @@ import net.minecraft.text.Text;
 public class PackListWidget extends EntryListWidget<PackListWidget.PackEntry> {
     private final ConfigScreen parent;
     
-    public PackListWidget(MinecraftClient client, int width, int height, int top, int bottom, int itemHeight, ConfigScreen parent) {
-        super(client, width, height, top, itemHeight);
+    public PackListWidget(MinecraftClient client, int width, int bottom, int top, int itemHeight, ConfigScreen parent) {
+        // Use constructor height parameter as bottom boundary for render area
+        super(client, width, bottom, top, itemHeight);
         this.parent = parent;
     }
     
@@ -44,8 +45,9 @@ public class PackListWidget extends EntryListWidget<PackListWidget.PackEntry> {
 
     @Override
     public boolean mouseClicked(Click click, boolean doubleClick) {
+        // Only handle clicks within the actual list boundaries
         if (!this.isMouseOver(click.x(), click.y())) {
-            return super.mouseClicked(click, doubleClick);
+            return false;
         }
 
         if (click.button() == 0) {
@@ -102,11 +104,11 @@ public class PackListWidget extends EntryListWidget<PackListWidget.PackEntry> {
 
             // Zeichne Pack-Name
             String displayName = PackManager.getPackDisplayName(packName);
-            int nameColor = 0xFFFFFF;
-            if (missing) {
-                displayName = displayName + " (missing)";
-                nameColor = 0xAAAAAA;
-            }
+                int nameColor = 0xFFFFFFFF;
+                if (missing) {
+                    displayName = displayName + " (missing)";
+                    nameColor = 0xFFAAAAAA;
+                }
             context.drawTextWithShadow(
                 client.textRenderer,
                 displayName,

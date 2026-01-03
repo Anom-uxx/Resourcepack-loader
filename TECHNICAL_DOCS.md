@@ -1,4 +1,4 @@
-# Technical Documentation - Resource Pack Loader
+# Technical Documentation - Resource Pack Loader 
 
 ## Architecture Overview
 

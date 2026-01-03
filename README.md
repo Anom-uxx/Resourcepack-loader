@@ -1,4 +1,4 @@
-# Resource Pack Loader
+# Resource Pack Loader 
 
 A Minecraft Fabric **CLIENT-SIDE** mod for automatically enabling/disabling resource packs based on the server you join.
 

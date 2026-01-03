@@ -157,16 +157,30 @@ public class PackManager {
         // Whitelist vanilla packs so the filter still shows them
         Set<String> vanillaIds = Set.of("vanilla", "programmer_art", "high_contrast");
 
+        // Helper to normalize ids by stripping a trailing .zip
+        java.util.function.Function<String, String> stripZip = s -> {
+            if (s.endsWith(".zip")) {
+                return s.substring(0, s.length() - 4);
+            }
+            return s;
+        };
+
         List<String> packs = new ArrayList<>();
         for (ResourcePackProfile profile : packManager.getProfiles()) {
             String id = profile.getId();
             String idLower = id.toLowerCase();
+            String idBare = stripZip.apply(idLower);
 
             if (resourcePacksOnly) {
                 String tail = id.contains("/") ? id.substring(id.lastIndexOf('/') + 1) : id;
                 String tailLower = tail.toLowerCase();
-                boolean matchesLocal = localPackIds.contains(idLower) || localPackIds.contains(tailLower);
-                boolean isVanilla = vanillaIds.contains(idLower);
+                String tailBare = stripZip.apply(tailLower);
+
+                boolean matchesLocal = localPackIds.contains(idLower)
+                    || localPackIds.contains(idBare)
+                    || localPackIds.contains(tailLower)
+                    || localPackIds.contains(tailBare);
+                boolean isVanilla = vanillaIds.contains(idLower) || vanillaIds.contains(idBare);
 
                 // In filtered mode, only show vanilla packs or those backed by files/folders in resourcepacks/
                 if (!matchesLocal && !isVanilla) {

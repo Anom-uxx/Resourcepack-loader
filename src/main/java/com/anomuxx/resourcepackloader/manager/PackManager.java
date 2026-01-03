@@ -154,6 +154,8 @@ public class PackManager {
         }
         
         Set<String> localPackIds = resourcePacksOnly ? getLocalResourcePackIds() : Set.of();
+        // Whitelist vanilla packs so the filter still shows them
+        Set<String> vanillaIds = Set.of("vanilla", "programmer_art", "high_contrast");
 
         List<String> packs = new ArrayList<>();
         for (ResourcePackProfile profile : packManager.getProfiles()) {
@@ -161,14 +163,13 @@ public class PackManager {
             String idLower = id.toLowerCase();
 
             if (resourcePacksOnly) {
-                // Show user/vanilla packs; hide obvious mod-provided packs unless they match a local file/folder name
                 String tail = id.contains("/") ? id.substring(id.lastIndexOf('/') + 1) : id;
                 String tailLower = tail.toLowerCase();
                 boolean matchesLocal = localPackIds.contains(idLower) || localPackIds.contains(tailLower);
-                String display = profile.getDisplayName().getString();
-                boolean looksMod = display.startsWith("Fabric Mod ") || idLower.startsWith("fabric/") || idLower.startsWith("mod/");
+                boolean isVanilla = vanillaIds.contains(idLower);
 
-                if (looksMod && !matchesLocal) {
+                // In filtered mode, only show vanilla packs or those backed by files/folders in resourcepacks/
+                if (!matchesLocal && !isVanilla) {
                     continue;
                 }
             }

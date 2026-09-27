@@ -1,14 +1,16 @@
 package com.anomuxx.resourcepackloader;
 
+import com.mojang.blaze3d.platform.InputConstants;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.Screen;
 import com.anomuxx.resourcepackloader.config.ModConfig;
 import com.anomuxx.resourcepackloader.event.ServerConnectionHandler;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.option.KeyBinding;
-import net.minecraft.client.util.InputUtil;
-import net.minecraft.text.Text;
+import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
+import net.minecraft.client.KeyMapping;
+import com.mojang.blaze3d.platform.InputConstants;
+import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +24,7 @@ public class ResourcePackLoader implements ClientModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("ResourcePackLoader");
     
     private static ModConfig config;
-    private static KeyBinding configKeyBinding;
+    private static KeyMapping configKeyBinding;
     
     @Override
     public void onInitializeClient() {
@@ -35,16 +37,16 @@ public class ResourcePackLoader implements ClientModInitializer {
         ServerConnectionHandler.init(config);
         
         // Register keybinding for config screen (Right Shift)
-        configKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+        configKeyBinding = KeyMappingHelper.registerKeyMapping(new KeyMapping(
             "key.resourcepack-loader.config",
-            InputUtil.Type.KEYSYM,
+                InputConstants.Type.KEYSYM,
             GLFW.GLFW_KEY_RIGHT_SHIFT,
-            KeyBinding.Category.MISC
+            KeyMapping.Category.MISC
         ));
         
         // Register tick event to check for keybinding
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (configKeyBinding.wasPressed()) {
+            while (configKeyBinding.consumeClick()) {
                 openConfigScreen(client);
             }
         });
@@ -80,15 +82,20 @@ public class ResourcePackLoader implements ClientModInitializer {
     /**
      * Open the configuration screen.
      */
-    public static void openConfigScreen(MinecraftClient client) {
+    public static void openConfigScreen(Minecraft client) {
         if (client != null) {
-            // Import is done in the GUI class to avoid circular dependencies
             client.execute(() -> {
                 try {
+                    // 1. 获取当前屏幕作为父屏幕
+                    Screen previousScreen = client.gui.screen();
+
+                    // 2. 反射创建 ConfigScreen，传入父屏幕
                     Class<?> screenClass = Class.forName("com.anomuxx.resourcepackloader.gui.ConfigScreen");
-                    Object screen = screenClass.getDeclaredConstructor(net.minecraft.client.gui.screen.Screen.class)
-                        .newInstance(client.currentScreen);
-                    client.setScreen((net.minecraft.client.gui.screen.Screen) screen);
+                    Object screen = screenClass.getDeclaredConstructor(net.minecraft.client.gui.screens.Screen.class)
+                            .newInstance(previousScreen);
+
+                    // 3. 显示配置屏幕
+                    client.setScreenAndShow((net.minecraft.client.gui.screens.Screen) screen);
                 } catch (Exception e) {
                     LOGGER.error("Failed to open config screen", e);
                 }

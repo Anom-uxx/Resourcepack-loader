@@ -32,7 +32,7 @@ A Minecraft Fabric **CLIENT-SIDE** mod for automatically enabling/disabling reso
 
 You can open the configuration screen in two ways:
 
-1. **Via ModMenu** (if installed): Click "Mods" → "Resource Pack Loader" → "Config"
+1. **Via ModMenu** (if installed): MouseButtonEvent "Mods" → "Resource Pack Loader" → "Config"
 2. **Via Keybind**: Press **Right Shift** (default key)
 
 ### Configuring Server Profiles
@@ -40,11 +40,11 @@ You can open the configuration screen in two ways:
 1. Open the configuration GUI
 2. Enter a server address in the text field and click "Add Server"
 3. Select the server from the list
-4. Click on resource packs to cycle through states:
+4. MouseButtonEvent on resource packs to cycle through states:
    - **○** (Gray) - No change (neutral)
    - **✓** (Green) - Enable on this server
    - **✗** (Red) - Disable on this server
-5. Click "Save & Close" to apply your changes
+5. MouseButtonEvent "Save & Close" to apply your changes
 
 ### Default Profile
 

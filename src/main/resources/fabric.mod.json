@@ -3,9 +3,10 @@
 	"id": "resourcepack-loader",
 	"version": "${version}",
 	"name": "Resource Pack Loader",
-	"description": "Automatically enable/disable resource packs based on the server you join",
+	"description": "Automatically enable/disable resource packs based on the server you join. (Unofficial 26.2 fork of Anom-uxx's original mod)",
 	"authors": [
-		"Anom-uxx"
+		"Anom-uxx",
+		"MCforevers"
 	],
 	"contact": {
 		"homepage": "https://github.com/Anom-uxx/Resourcepack-loader-"
@@ -22,9 +23,10 @@
 		]
 	},
 	"depends": {
-		"fabricloader": ">=0.16.0",
+		"fabricloader": ">=0.19.5",
 		"fabric-api": "*",
-		"minecraft": ">=1.21.10 <=1.21.11"
+		"minecraft": "~26.2",
+		"java": ">=25"
 	},
 	"suggests": {
 		"modmenu": "*"

@@ -1,5 +1,10 @@
 package com.anomuxx.resourcepackloader.config;
 
+import net.minecraft.client.gui.components.ContainerObjectSelectionList;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.input.MouseButtonEvent;
+
 import java.util.ArrayList;
 import java.util.List;
 

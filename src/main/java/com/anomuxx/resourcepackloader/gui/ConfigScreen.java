@@ -1,14 +1,19 @@
 package com.anomuxx.resourcepackloader.gui;
 
+import net.minecraft.client.gui.components.ContainerObjectSelectionList;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.input.MouseButtonEvent;
+
 import com.anomuxx.resourcepackloader.ResourcePackLoader;
 import com.anomuxx.resourcepackloader.config.ModConfig;
 import com.anomuxx.resourcepackloader.config.ServerProfile;
 import com.anomuxx.resourcepackloader.manager.PackManager;
-import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.gui.widget.TextFieldWidget;
-import net.minecraft.text.Text;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.network.chat.Component;
 
 import java.util.List;
 import java.util.Set;
@@ -26,19 +31,19 @@ public class ConfigScreen extends Screen {
     // GUI components
     private ServerListWidget serverList;
     private PackListWidget packList;
-    private TextFieldWidget serverAddressField;
-    private ButtonWidget addServerButton;
-    private ButtonWidget removeServerButton;
-    private ButtonWidget saveButton;
-    private ButtonWidget cancelButton;
-    private ButtonWidget filterButton;
+    private EditBox serverAddressField;
+    private Button addServerButton;
+    private Button removeServerButton;
+    private Button saveButton;
+    private Button cancelButton;
+    private Button filterButton;
 
     private boolean showOnlyResourcePacks = false;
     
     private String selectedServer = null;
     
     public ConfigScreen(Screen parent) {
-        super(Text.literal("Resource Pack Loader Configuration"));
+        super(Component.literal("Resource Pack Loader Configuration"));
         this.parent = parent;
         this.config = ResourcePackLoader.getConfig();
     }
@@ -60,31 +65,31 @@ public class ConfigScreen extends Screen {
         int listHeight = Math.max(50, removeButtonY - topListY - 10);
 
         // Server address input field
-        this.serverAddressField = new TextFieldWidget(
-            this.textRenderer,
+        this.serverAddressField = new EditBox(
+            this.font,
             this.width / 2 - 152,
             22,
             200,
             20,
-            Text.literal("Server Address")
+            Component.literal("Server Address")
         );
         this.serverAddressField.setMaxLength(128);
-        this.serverAddressField.setPlaceholder(Text.literal("Enter server address..."));
-        this.addDrawableChild(this.serverAddressField);
+        this.serverAddressField.setHint(Component.literal("Enter server address..."));
+        this.addRenderableWidget(this.serverAddressField);
         
         // Add server button
-        this.addServerButton = ButtonWidget.builder(
-            Text.literal("Add Server"),
+        this.addServerButton = Button.builder(
+            Component.literal("Add Server"),
             button -> addServer()
-        ).dimensions(this.width / 2 + 55, 22, 100, 20).build();
-        this.addDrawableChild(this.addServerButton);
+        ).bounds(this.width / 2 + 55, 22, 100, 20).build();
+        this.addRenderableWidget(this.addServerButton);
         
         // Server list (left side)
         // Set bottom to match black background exactly
         int listBottom = bottomButtonsY - 30;
 
         this.serverList = new ServerListWidget(
-            this.client,
+            this.minecraft,
             listWidth,
             this.height,
             topListY,
@@ -100,7 +105,7 @@ public class ConfigScreen extends Screen {
         
         // Pack list (right side)
         this.packList = new PackListWidget(
-            this.client,
+            this.minecraft,
             listWidth,
             this.height,
             topListY,
@@ -112,19 +117,19 @@ public class ConfigScreen extends Screen {
         this.packList.setHeight(listBottom - topListY);
 
         // Filter toggle above pack list
-        this.filterButton = ButtonWidget.builder(
-            Text.literal("Filter: All"),
+        this.filterButton = Button.builder(
+            Component.literal("Filter: All"),
             button -> {
                 this.showOnlyResourcePacks = !this.showOnlyResourcePacks;
-                button.setMessage(Text.literal(this.showOnlyResourcePacks ? "Filter: Resourcepacks" : "Filter: All"));
+                button.setMessage(Component.literal(this.showOnlyResourcePacks ? "Filter: Resourcepacks" : "Filter: All"));
                 updatePackList();
             }
-        ).dimensions(this.width - listWidth - margin, topListY - 24, listWidth, 20).build();
+        ).bounds(this.width - listWidth - margin, topListY - 24, listWidth, 20).build();
         
         // Add widgets in order
-        this.addDrawableChild(this.serverList);
-        this.addDrawableChild(this.packList);
-        this.addDrawableChild(this.filterButton);
+        this.addRenderableWidget(this.serverList);
+        this.addRenderableWidget(this.packList);
+        this.addRenderableWidget(this.filterButton);
         
         // Default selection so the user sees something immediately
         if (this.selectedServer == null) {
@@ -135,37 +140,37 @@ public class ConfigScreen extends Screen {
         updatePackList();
         
         // Remove server button - moved to bottom row next to Save & Close
-        this.removeServerButton = ButtonWidget.builder(
-            Text.literal("Remove"),
+        this.removeServerButton = Button.builder(
+            Component.literal("Remove"),
             button -> removeServer()
-        ).dimensions(this.width / 2 - 155, bottomButtonsY - 25, 100, 20).build();
-        this.addDrawableChild(this.removeServerButton);
+        ).bounds(this.width / 2 - 155, bottomButtonsY - 25, 100, 20).build();
+        this.addRenderableWidget(this.removeServerButton);
         
         // Save button
-        this.saveButton = ButtonWidget.builder(
-            Text.literal("Save & Close"),
+        this.saveButton = Button.builder(
+            Component.literal("Save & Close"),
             button -> {
                 ResourcePackLoader.LOGGER.info("Saving config from GUI...");
                 ResourcePackLoader.saveConfig();
                 ResourcePackLoader.LOGGER.info("Config saved, closing screen");
-                this.close();
+                this.onClose();
             }
-        ).dimensions(this.width / 2 - 155, bottomButtonsY, 150, 20).build();
-        this.addDrawableChild(this.saveButton);
+        ).bounds(this.width / 2 - 155, bottomButtonsY, 150, 20).build();
+        this.addRenderableWidget(this.saveButton);
         
         // Cancel button
-        this.cancelButton = ButtonWidget.builder(
-            Text.literal("Cancel"),
+        this.cancelButton = Button.builder(
+            Component.literal("Cancel"),
             button -> {
                 ResourcePackLoader.reloadConfig();
-                this.close();
+                this.onClose();
             }
-        ).dimensions(this.width / 2 + 5, bottomButtonsY, 150, 20).build();
-        this.addDrawableChild(this.cancelButton);
+        ).bounds(this.width / 2 + 5, bottomButtonsY, 150, 20).build();
+        this.addRenderableWidget(this.cancelButton);
     }
     
     @Override
-    public void render(DrawContext context, int mouseX, int mouseY, float delta) {
+    public void extractRenderState(GuiGraphicsExtractor context, int mouseX, int mouseY, float delta) {
         // Zeichne dunkle Hintergründe für die Listen (vor super.render!)
         int margin = 10;
         int listWidth = 150;
@@ -179,27 +184,27 @@ public class ConfigScreen extends Screen {
         context.fill(this.width - listWidth - margin, topListY, this.width - margin, listBottom, 0xC0101010);
         
         // Render widgets first
-        super.render(context, mouseX, mouseY, delta);
+        super.extractRenderState(context, mouseX, mouseY, delta);
         
         // Render title
-        context.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 15, 0xFFFFFFFF);
+        context.centeredText(this.font, this.title, this.width / 2, 15, 0xFFFFFFFF);
         
         // Render section labels (align to lists)
         int labelY = topListY - 12;
-        context.drawTextWithShadow(this.textRenderer, "Server Profiles:", margin, labelY, 0xFFFFFFFF);
+        context.text(this.font, "Server Profiles:", margin, labelY, 0xFFFFFFFF);
         // Pack list label is now in the filter button, no separate label needed
         
         // Render selected server info
         if (selectedServer != null) {
             String info = "Selected: " + selectedServer;
-            context.drawTextWithShadow(this.textRenderer, info, this.width / 2 - 40, labelY, 0xFFAAAAAA);
+            context.text(this.font, info, this.width / 2 - 40, labelY, 0xFFAAAAAA);
         }
     }
     
     @Override
-    public void close() {
-        if (this.client != null) {
-            this.client.setScreen(this.parent);
+    public void onClose() {
+        if (this.minecraft != null) {
+            this.minecraft.setScreenAndShow(this.parent);
         }
     }
     
@@ -207,7 +212,7 @@ public class ConfigScreen extends Screen {
      * Add a new server profile.
      */
     private void addServer() {
-        String address = normalizeServerAddress(this.serverAddressField.getText());
+        String address = normalizeServerAddress(this.serverAddressField.getValue());
         
         if (address.isEmpty()) {
             ResourcePackLoader.LOGGER.warn("Attempted to add empty server address");
@@ -227,7 +232,7 @@ public class ConfigScreen extends Screen {
         }
         
         // Clear input and update list
-        this.serverAddressField.setText("");
+        this.serverAddressField.setValue("");
         updateServerList();
         
         // Select the new server
@@ -320,7 +325,10 @@ public class ConfigScreen extends Screen {
         // Reselect previously chosen server if it still exists (only if we have a selection)
         if (this.selectedServer != null) {
             ServerListWidget.ServerEntry toSelect = null;
-            for (ServerListWidget.ServerEntry entry : this.serverList.children()) {
+            for (net.minecraft.client.gui.components.events.GuiEventListener listener : this.serverList.children()) {
+                if (!(listener instanceof ServerListWidget.ServerEntry entry)) {
+                    continue;
+                }
                 if (entry != null && this.selectedServer.equals(entry.getServerAddress())) {
                     toSelect = entry;
                     break;

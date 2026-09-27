@@ -4,9 +4,9 @@ import com.anomuxx.resourcepackloader.config.ModConfig;
 import com.anomuxx.resourcepackloader.config.ServerProfile;
 import com.anomuxx.resourcepackloader.manager.PackManager;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayNetworkHandler;
-import net.minecraft.client.network.ServerInfo;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.multiplayer.ClientPacketListener;
+import net.minecraft.client.multiplayer.ServerData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,7 +37,7 @@ public class ServerConnectionHandler {
      * Called when the player joins a server.
      * Applies the server-specific resource pack profile if available.
      */
-    private static void onServerJoin(ClientPlayNetworkHandler handler, MinecraftClient client) {
+    private static void onServerJoin(ClientPacketListener handler, Minecraft client) {
         // Get server address
         String serverAddress = getServerAddress(client);
         
@@ -79,7 +79,7 @@ public class ServerConnectionHandler {
      * Called when the player disconnects from a server.
      * Optionally applies the default profile.
      */
-    private static void onServerDisconnect(ClientPlayNetworkHandler handler, MinecraftClient client) {
+    private static void onServerDisconnect(ClientPacketListener handler, Minecraft client) {
         LOGGER.info("Disconnected from server");
         
         // Get default profile
@@ -111,19 +111,19 @@ public class ServerConnectionHandler {
      * Get the current server address.
      * Returns null if not connected to a server.
      */
-    private static String getServerAddress(MinecraftClient client) {
+    private static String getServerAddress(Minecraft client) {
         if (client == null) {
             return null;
         }
+
+        ServerData data = client.getCurrentServer();
         
-        ServerInfo serverInfo = client.getCurrentServerEntry();
-        
-        if (serverInfo == null) {
+        if (data == null) {
             // Not connected to a multiplayer server (singleplayer or null)
             return null;
         }
-        
-        return serverInfo.address;
+
+        return data.ip;
     }
     
     /**

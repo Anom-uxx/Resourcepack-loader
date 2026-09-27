@@ -1,20 +1,25 @@
 package com.anomuxx.resourcepackloader.gui;
 
+import net.minecraft.client.gui.components.ContainerObjectSelectionList;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.input.MouseButtonEvent;
+
 import com.anomuxx.resourcepackloader.manager.PackManager;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.gui.Click;
-import net.minecraft.client.gui.widget.EntryListWidget;
-import net.minecraft.client.gui.screen.narration.NarrationMessageBuilder;
-import net.minecraft.text.Text;
+import net.minecraft.client.Minecraft;
+
+import net.minecraft.client.input.MouseButtonEvent;
+import net.minecraft.client.gui.components.ContainerObjectSelectionList;
+import net.minecraft.client.gui.narration.NarratableEntry;
+import net.minecraft.network.chat.Component;
 
 /**
  * Widget for displaying and configuring resource pack states.
  */
-public class PackListWidget extends EntryListWidget<PackListWidget.PackEntry> {
+public class PackListWidget extends ContainerObjectSelectionList<PackListWidget.PackEntry> {
     private final ConfigScreen parent;
     
-    public PackListWidget(MinecraftClient client, int width, int bottom, int top, int itemHeight, ConfigScreen parent) {
+    public PackListWidget(Minecraft client, int width, int bottom, int top, int itemHeight, ConfigScreen parent) {
         // Use constructor height parameter as bottom boundary for render area
         super(client, width, bottom, top, itemHeight);
         this.parent = parent;
@@ -32,19 +37,19 @@ public class PackListWidget extends EntryListWidget<PackListWidget.PackEntry> {
     public int getRowWidth() {
         return this.width - 10;
     }
-    
+
     @Override
-    protected int getScrollbarX() {
+    protected int scrollBarX() {
         return this.getX() + this.width - 6;
     }
 
-    @Override
-    protected void appendClickableNarrations(NarrationMessageBuilder builder) {
-        // Narration for accessibility
-    }
+
+
+
+
 
     @Override
-    public boolean mouseClicked(Click click, boolean doubleClick) {
+    public boolean mouseClicked(MouseButtonEvent click, boolean doubleClick) {
         // Strictly check both isMouseOver AND actual Y-coordinate bounds
         // to avoid intercepting clicks meant for buttons below
         if (!this.isMouseOver(click.x(), click.y())) {
@@ -75,7 +80,7 @@ public class PackListWidget extends EntryListWidget<PackListWidget.PackEntry> {
     /**
      * Entry for a single resource pack in the list.
      */
-    public static class PackEntry extends Entry<PackEntry> {
+    public static class PackEntry extends ContainerObjectSelectionList.Entry<PackEntry> {
         private final String packName;
         private ConfigScreen.PackState state;
         private final boolean missing;
@@ -87,12 +92,22 @@ public class PackListWidget extends EntryListWidget<PackListWidget.PackEntry> {
             this.missing = missing;
             this.list = list;
         }
-        
+
         @Override
-        public void render(DrawContext context, int mouseX, int mouseY, boolean hovered, float delta) {
-            MinecraftClient client = MinecraftClient.getInstance();
-            
-            // Verwende die von EntryListWidget gesetzten Positionen
+        public java.util.List<? extends net.minecraft.client.gui.narration.NarratableEntry> narratables() {
+            return java.util.List.of();
+        }
+
+        @Override
+        public java.util.List<net.minecraft.client.gui.components.events.GuiEventListener> children() {
+            return java.util.List.of();
+        }
+
+        @Override
+        public void extractContent(GuiGraphicsExtractor context, int mouseX, int mouseY, boolean hovered, float delta) {
+            Minecraft client = Minecraft.getInstance();
+
+            // Verwende die von ContainerObjectSelectionList gesetzten Positionen
             int entryX = this.getContentX();
             int entryY = this.getContentY();
             int entryWidth = this.getContentWidth();
@@ -104,8 +119,8 @@ public class PackListWidget extends EntryListWidget<PackListWidget.PackEntry> {
             }
 
             // Zeichne Status-Symbol
-            context.drawTextWithShadow(
-                client.textRenderer,
+            context.text(
+                client.font,
                 state.symbol,
                 entryX + 5,
                 entryY + (entryHeight - 8) / 2,
@@ -119,8 +134,8 @@ public class PackListWidget extends EntryListWidget<PackListWidget.PackEntry> {
                     displayName = displayName + " (missing)";
                     nameColor = 0xFFAAAAAA;
                 }
-            context.drawTextWithShadow(
-                client.textRenderer,
+            context.text(
+                client.font,
                 displayName,
                 entryX + 20,
                 entryY + (entryHeight - 8) / 2,

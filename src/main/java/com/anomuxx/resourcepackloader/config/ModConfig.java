@@ -1,5 +1,9 @@
 package com.anomuxx.resourcepackloader.config;
 
+import net.minecraft.client.gui.components.ContainerObjectSelectionList;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.input.MouseButtonEvent;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
